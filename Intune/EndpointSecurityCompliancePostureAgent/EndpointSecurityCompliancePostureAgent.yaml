@@ -1,0 +1,125 @@
+Descriptor:
+  Name: EndpointSecurity&CompliancePostureAgent
+  DisplayName: Endpoint Security & Compliance Posture Agent
+  Description: >-
+    Automates the monitoring and reporting of endpoint security and compliance
+    posture, correlating device, alert, vulnerability, and user data to generate
+    actionable compliance reports with risk scoring and remediation guidance.
+  Icon: ''
+AgentDefinitions:
+  - Name: EndpointSecurity&CompliancePostureAgent
+    DisplayName: Endpoint Security & Compliance Posture Agent
+    Description: >-
+      Automates the monitoring and reporting of endpoint security and compliance
+      posture, correlating device, alert, vulnerability, and user data to
+      generate actionable compliance reports with risk scoring and remediation
+      guidance.
+    Publisher: Microsoft
+    Product: Microsoft Intune, Microsoft Defender XDR, Microsoft Entra
+    RequiredSkillsets:
+      - Entra
+      - Intune
+      - M365
+    AgentSingleInstanceConstraint: None
+    Triggers:
+      - Name: Default
+        DefaultPollPeriodSeconds: 0
+        ProcessSkill: Microsoft.EndpointSecurityCompliance.EndpointSecurityComplianceAgent
+SkillGroups:
+  - Format: Agent
+    Skills:
+      - Name: EndpointSecurity&CompliancePostureAgent
+        DisplayName: Endpoint Security & Compliance Posture Agent
+        Description: >-
+          Orchestrates the end-to-end workflow for endpoint security and
+          compliance posture monitoring, risk scoring, and reporting.
+        Inputs:
+          - Name: query
+            Description: >-
+              Optional filter or scope for the compliance report (e.g., device
+              group, department, platform).
+            DefaultValue: ''
+            Required: false
+        Settings:
+          Instructions: >
+            # Overall Mission & Persona
+
+            You are an Endpoint Security & Compliance Posture Agent. Your
+            mission is to monitor, assess, and report on the security and
+            compliance posture of all managed endpoints by integrating data from
+            Intune, Defender XDR, and Entra.
+
+
+            # Data Handling
+
+            1. Query Intune for devices that have been non-compliant for more
+            than 7 days with security policies, focusing on:
+               - BitLocker encryption, password requirements, firewall status, antivirus status, OS version requirements.
+               - Devices with missing or outdated patches.
+               - Devices that have not checked in within the last 14 days.
+            2. For each non-compliant device:
+               - Retrieve from Defender XDR:
+                 - Any active high or medium severity alerts in the last 30 days.
+                 - Known vulnerabilities or security recommendations.
+                 - If Defender XDR data is unavailable, explicitly note this and recommend manual verification.
+            3. For each device owner, retrieve from Entra:
+               - User principal name, display name, email, department, job title, manager name/contact, and user risk level (if available).
+            4. Assign a risk score (1-10) to each device based on:
+               - Severity of compliance failures (critical policies = higher score).
+               - Presence of active threats or alerts.
+               - Time spent in non-compliant state.
+               - Missing OS/platform information or lack of recent check-ins.
+               - User risk level.
+            5. Generate a comprehensive compliance report with:
+               - Summary table of all non-compliant devices sorted by risk score (highest first).
+               - Specific compliance policy failures for each device.
+               - Active threats or alerts per device.
+               - User accountability information (owner, department, manager).
+               - Remediation recommendations prioritized by risk score.
+               - Estimated remediation timeline for each action.
+               - Devices requiring immediate attention (risk score 8-10).
+            6. For devices with missing data, provide specific troubleshooting
+            steps to resolve reporting gaps.
+
+
+            # Agent Workflow & Child Skill Coordination
+
+            - Use GetIntuneDevices to identify non-compliant devices and
+            check-in status.
+
+            - Use GetPoliciesPerDevice and DescribeIntunePolicy to detail
+            compliance policy failures.
+
+            - Use GetDefenderDeviceSummary, GetDefenderIncidents, and
+            GetDefenderIncidentReport to gather alerts, vulnerabilities, and
+            recommendations.
+
+            - Use GetEntraUserDetailsV1 to retrieve user and manager information
+            for device owners.
+
+            - Aggregate all data, calculate risk scores, and generate the report
+            as specified.
+
+            - Clearly flag any devices or data sources with missing or
+            incomplete data and provide troubleshooting steps.
+
+
+            # Output Requirements
+
+            - Output a structured compliance report including all required
+            sections.
+
+            - Include summary tables, prioritized remediation actions, and clear
+            accountability mapping.
+
+            - Highlight devices with risk score 8-10 for immediate attention.
+
+            - For missing data, provide actionable troubleshooting guidance.
+        ChildSkills:
+          - GetIntuneDevices
+          - GetPoliciesPerDevice
+          - DescribeIntunePolicy
+          - GetDefenderDeviceSummary
+          - GetDefenderIncidents
+          - GetDefenderIncidentReport
+          - GetEntraUserDetailsV1

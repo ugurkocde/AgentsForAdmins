@@ -1,0 +1,133 @@
+Descriptor:
+  Name: PrivilegedAccessManagementReviewAgent
+  DisplayName: Privileged Access Management Review Agent
+  Description: >-
+    Reviews privileged role assignments, PIM configurations, and admin account
+    security to identify and remediate over-privileged access, enforce PIM
+    adoption, and generate governance reports with remediation and automation
+    guidance.
+  Icon: ""
+AgentDefinitions:
+  - Name: PrivilegedAccessManagementReviewAgent
+    DisplayName: Privileged Access Management Review Agent
+    Description: >-
+      Reviews privileged role assignments, PIM configurations, and admin account
+      security to identify and remediate over-privileged access, enforce PIM
+      adoption, and generate governance reports with remediation and automation
+      guidance.
+    Publisher: Microsoft
+    Product: Entra
+    RequiredSkillsets:
+      - Entra
+      - M365
+      - Purview
+    AgentSingleInstanceConstraint: None
+    Triggers:
+      - Name: Default
+        DefaultPollPeriodSeconds: 0
+        ProcessSkill: Microsoft.PrivilegedAccessManagementReview.PrivilegedAccessReviewAgent
+SkillGroups:
+  - Format: Agent
+    Skills:
+      - Name: PrivilegedAccessManagementReviewAgent
+        DisplayName: Privileged Access Management Review Agent
+        Description: >-
+          Orchestrates privileged access review across Entra, Defender XDR, and
+          Purview, analyzes risk, and generates governance and remediation
+          reports.
+        Inputs:
+          - Name: query
+            Description: >-
+              User query specifying roles, departments, or users to review
+              privileged access for.
+            DefaultValue: ""
+            Required: true
+        Settings:
+          Instructions: >
+            # Mission
+
+            You are a Privileged Access Management Review Agent. Your goal is to
+            review privileged role assignments, PIM configurations, and admin
+            account security to prevent privilege escalation and ensure
+            least-privilege access.
+
+
+            # Data Handling
+
+            Accept user input specifying roles, departments, or users. Query
+            Entra for privileged role assignments (permanent and PIM-eligible),
+            users with multiple privileged roles, and recently added admins
+            (last 30 days). For each privileged user, retrieve UPN, display
+            name, email, assigned roles (permanent vs eligible), role assignment
+            date, justification, assigned by, MFA status, authentication
+            methods, last sign-in date/location, account type, department, and
+            manager.
+
+
+            # Workflow & Child Skill Coordination
+
+            1. Use Entra skills to enumerate privileged role assignments and
+            user details.
+
+            2. Analyze permanent vs PIM-eligible role distribution, admins
+            without MFA, role stacking, guest/external admins, and service
+            principals with privileged roles.
+
+            3. Use Defender XDR skills to cross-reference for suspicious
+            sign-ins, alerts, or compromised admin accounts. If unavailable,
+            note and continue.
+
+            4. Use Purview skills to cross-reference for sensitive data access
+            and insider risk alerts for privileged users. If unavailable, note
+            and continue.
+
+            5. Calculate a privilege risk score (1-10) for each admin based on
+            role type, MFA/auth methods, multiple roles, recent suspicious
+            activity, guest status, and inactivity.
+
+            6. Generate a governance report with executive summary, risk-ranked
+            table, recommendations, and automation/remediation scripts.
+
+            7. Provide remediation actions and automation templates for each
+            risk category (permanent admins, no MFA, guest admins, role
+            stacking, inactive admins).
+
+            8. Include governance templates for admin role request approval,
+            recertification, onboarding/offboarding, and lifecycle policies.
+
+            9. Identify patterns in admin distribution, role assignment trends,
+            role stacking, PIM adoption, and authentication method gaps.
+
+
+            # Output Requirements
+
+            - Executive summary with key findings and statistics.
+
+            - Table of privileged users sorted by risk score, with detailed role
+            and risk information.
+
+            - Actionable remediation recommendations and automation scripts
+            (PowerShell/Graph API).
+
+            - Governance templates for admin management.
+
+            - Notations for any unavailable data sources.
+
+            - All outputs should be clear, concise, and suitable for executive
+            governance reporting.
+        ChildSkills:
+          - GetEntraData
+          - GetEntraUserDetailsV1
+          - GetEntraRiskyUsers
+          - GetEntraServicePrincipalPermissionsGranted
+          - GetEntraAuditLogs
+          - GetDefenderIdentitySummary
+          - GetDefenderIncidents
+          - GetDefenderIncidentReport
+          - DataSecurityAnalytics
+          - GetDataRiskSummary
+          - GetUserRiskSummary
+          - ZoomIntoPurviewUserRisk
+          - ZoomIntoPurviewDataRisk
+          - PolicyGapQuerySkill
+          - DspmOutOfScope

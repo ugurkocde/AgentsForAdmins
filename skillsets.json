@@ -1,0 +1,277 @@
+{
+  "content": null,
+  "value": [
+    {
+      "name": "GreyNoiseEnterprise",
+      "description": "Use this skill-set to call the GreyNoise API if the user provides a given IP and wants to know assess the likelihood of the IP address being associated with mass internet scanning or a common business service.\n- This skill invokes the GreyNoise Enterprise API.\n- Noise Contextual API: Requires knowledge of IP addresses and understanding of internet scanning activities. Ability to interpret context about an IP's behavior is crucial.\n- Noise Quick API: Requires basic understanding of IP addresses and the concept of \"noise\", or mass internet scanning, in network traffic. Ability to quickly analyze and interpret whether an IP address is likely to be just \"noise\".\n- Noise Multi API: Requires understanding of multiple IP addresses and the ability to analyze them in bulk. Knowledge of how to interpret whether a set of IP addresses are likely to be \"noise\".\n- RIOT API: Requires knowledge of IP addresses that belong to a common business service. Ability to interpret whether an IP address is part of a common business service.\n- GNQL API: Requires advanced knowledge of the GreyNoise Query Language (GNQL) and the ability to construct complex queries to extract specific information from the GreyNoise dataset.\n- GNQL STATS API: Requires advanced knowledge of the GreyNoise Query Language (GNQL) and the ability to query stats information on CVEs\n- CVE API: Requires knowledge of CVE and understanding of internet scanning activities.\n- Published by Microsoft and GreyNoise"
+    },
+    {
+      "name": "EASM",
+      "description": "Skills that query Microsoft Defender External Attack Surface Management, such as looking up Attack Surfaces."
+    },
+    {
+      "name": "Splunk",
+      "description": "This plugin allows a user to make calls to the Splunk REST API. It is intended for the following uses:\n- Running basic ad-hoc searches (both normal and one-shot searches) on data sets indexed by Splunk. \n- Creating, retrieving, and dispatching saved searches from Splunk\n"
+    },
+    {
+      "name": "ReversingLabsSpectraAnalyze",
+      "description": "Supplies analysts with detailed file analysis results from a ReversingLabs Spectra Analyze appliance."
+    },
+    {
+      "name": "Entra",
+      "description": "Skills that interact with the Microsoft Graph APIs."
+    },
+    {
+      "name": "Saviynt",
+      "description": "Gain comprehensive insights into identity-related risks by leveraging Saviynt's identity and access context to address Incidents and non-compliant risky user access effectively."
+    },
+    {
+      "name": "vederelabs",
+      "description": "Integration to the Forescout Vedere Labs Threat Intelligence feed to receive indicators and other threat intelligence provided by Vedere Labs research. This plugin is useful when investigating incidents or events to get greater details on indicator of compromise (IoC) and known exploited vulnerabilities.\nWith this plugin, a user can check for things like:\n- If an IP address, URL or Domain Name is part of a known indicator of compromise\n- Check for known or potentially malicious file hashes\n- Get information on Known Exploited Vulnerabilities (KEVs)\n- Get information on vulnerabilities originally reported by Vedere Labs\n- Retrieve contextual information on indicators or CVE's such as confidence levels, number of sightings and unique attacker ip counts, what phases of the mitre attack kill chain the indicator has been observed in along with technique refrences to mitre attack framework, and AS or country information including latitude and longitude of an IP\n"
+    },
+    {
+      "name": "FileUploads",
+      "description": "Skills that interact with files"
+    },
+    {
+      "name": "Silverfort",
+      "description": "Leverage the power of Silverfort's CEF data from Sentinel"
+    },
+    {
+      "name": "Fusion",
+      "description": "Skills that query multiple Microsoft security products."
+    },
+    {
+      "name": "Cybersixgill",
+      "description": "Real-time threat intelligence solutions to help security teams detect and respond to imminent threats from the clear, deep, and dark web."
+    },
+    {
+      "name": "Generic",
+      "description": "Skills for filtering, parsing, answering, understanding, and analysis."
+    },
+    {
+      "name": "Whoisfreaks",
+      "description": "Domain Intelligence includes both current and historical WHOIS and DNS data, as well as real-time SSL data of a domain. IP Intelligence encompasses IP-WHOIS, ASN-WHOIS, and information about domains hosted on specific IPs."
+    },
+    {
+      "name": "IPinfo",
+      "description": "This plugin enables interaction with the IPinfo API, offering powerful insights into IP addresses and associated network data. It provides comprehensive IP enrichment through various data points and intelligence, aiding in a wide range of use cases such as security analysis, IP geolocation, and network management.\n\nKey insights include:\n\n- Detailed geolocation data for accurate IP-based location information backed by IPinfo's active measurement network.\n- Anonymous IP detection service, identifying VPNs, proxies, iCloud Private Relay, Tor exit nodes and bots/hosting services.\n- Autonomous System Number (ASN) details for network identification and classification.\n- Company information tied to specific IP addresses.\n- Hosted domains associated with an IP, offering visibility into web properties\n- Carrier information revealing the ISP or mobile carrier IP addresses\n- Abuse contact information for reporting abusive activities.\n- WHOIS data for in-depth domain and IP ownership insights\n\nThis robust skillset makes IPinfo a versatile solution for enriching IP data with critical network and security intelligence. This is an official plugin developed by the IPinfo team in collaboration with Microsoft."
+    },
+    {
+      "name": "NL2API.Assistant",
+      "description": null
+    },
+    {
+      "name": "CheckPhish",
+      "description": "CheckPhish scan plugin for Microsoft Security Copilot"
+    },
+    {
+      "name": "NL2KQL",
+      "description": null
+    },
+    {
+      "name": "SecurityGuardian",
+      "description": "The Quest Security Guardian plugin enables enhanced Hybrid Active Directory security by combining the comprehensive prevention and detection capabilities of Quest Security Guardian in the form of finding and indicators with the advanced AI insights of Microsoft Copilot for Security. The use of this plugin is subject to the terms and conditions outlined here https://www.quest.com/legal/ai.aspx"
+    },
+    {
+      "name": "IPGeolocation",
+      "description": "IPGeolocation delivers a robust suite of APIs designed to provide precise geolocation data for any IPv4 or IPv6 address. The service offers detailed geolocation information, ASN (Autonomous System Number) and ISP details, timezone data, currency conversion info, security intelligence (including proxy, VPN, and TOR detection), and hostname lookups. These APIs empower businesses to enhance personalization, prevent fraud, and optimize user experiences. The platform also supports bulk IP lookups, provides multilingual responses, and enables content localization. In addition, it offers security insights through threat scores and details about known attackers or cloud providers, making it an essential tool for improving security and performance."
+    },
+    {
+      "name": "NL2KQLDefenderSentinel",
+      "description": "Skills to generate and run KQL queries against Microsoft 365 Advanced Hunting for Microsoft Defender XDR and Microsoft Sentinel."
+    },
+    {
+      "name": "AviatrixPlugin",
+      "description": "The API plugin to query security related configuration and events from the Aviatrix including Distributed Cloud Firewall Groups and Policies, and Events"
+    },
+    {
+      "name": "Intune",
+      "description": "Skills that query Microsoft Intune, such as looking up Intune managed devices, detected apps on a device, app protection policies"
+    },
+    {
+      "name": "TufinMate",
+      "description": "Get information about your network environment from Tufin."
+    },
+    {
+      "name": "Investigation",
+      "description": "Collection of skills that cater to investigation based problems."
+    },
+    {
+      "name": "forescoutrem",
+      "description": "Integration to the Forescout Risk and Exposure platform to retrieve contextual endpoint data. The information available includes details such as risks, vulnerabilities and events, along with switch or wireless connection information, host details such as network interfaces or exposed services and user information from directory servers.\nThis plugin can be used to:\n- Understand a timeline of events leading up to an incident\n- Understand the risk of compromise based on exposed services or known vulnerabilities\n- Determine hosts that are impacted by specific vulnerabilities\n- Gain further detail on hosts and what they are running, and where they are located, by hostnames, IP addresses, or MAC addresses\n- Prioritise hosts to be remediated based on risk score, known vulnerabilities or exposed services\n- Tell a user more about a specific device or host\n"
+    },
+    {
+      "name": "Orchestrator.Common",
+      "description": null
+    },
+    {
+      "name": "Pure_Signal_Scout",
+      "description": "Use this skill set to call the Pure Signal Scout API when the user provides an IP address, multiple IPs, a domain, or a Scout query to retrieve information such as identity, communication (comms), passive DNS, open ports, X.509 certificates, fingerprints, WHOIS data, summaries, etc.\n - This skill invokes the Pure Signal Scout API.\n - Foundation API: Provides results for multiple IP addresses and the ability to analyze them in bulk. The Foundation API helps interpret whether a set of IP addresses is likely to be suspicious, malicious, or informational.\n - IP Details API: Provides advanced details for a specific IP address, such as identity, communication (comms), passive DNS, open ports, X.509 certificates, fingerprints, WHOIS data, summaries, etc.\n - Search API: Provides information about domains and Scout search queries, including country codes, autonomous system information, tags, WHOIS data, open ports, passive DNS, communication, service details, fingerprints, X.509 certificates, etc."
+    },
+    {
+      "name": "HPWXP_US",
+      "description": "HP Workforce Experience Platform (WXP) API for device score, system health score, performance score, security score, BSODs, Disk utilisation, Windows 11 compatibility, warranty"
+    },
+    {
+      "name": "KnowledgeBase",
+      "description": "Skills that interact with the Microsoft knowledge base mainly for question answering"
+    },
+    {
+      "name": "censys_platform",
+      "description": "This plugin connects you to the Censys Platform, giving you powerful cybersecurity intelligence capabilities to:\n\n- Convert natural language questions into Censys Query Language (CenQL) queries\n- Lookup detailed information about any host (IP Address), web property (domain:port), or certificate (SHA256 hash)\n- Bulk lookup of hosts, web properties, and certificates\n- Search the global internet using specialized queries\n- Identify exposed assets, potential vulnerabilities, and security risks\n\nKey information sources:\n- Global Data Asset API: Provides detailed host, domain, and certificate information (IP Address, domain:port, SHA256 hash)\n- Global Data Search API: Enables advanced searches using CenQL\n- CenQL GPT API: Translates your natural language questions to technical queries\n\nPublished by Censys and Microsoft."
+    },
+    {
+      "name": "Orchestrator.InteractiveAgent",
+      "description": "Skills to run agent mode iterations."
+    },
+    {
+      "name": "DruvaSentinelPlugin",
+      "description": "Provides natural language skills to investigate Druva security events and anomalies in Microsoft Sentinel."
+    },
+    {
+      "name": "LearnKnowledgeService",
+      "description": "Skills that interact with the Microsoft Learn Knowledge Service mainly for question answering, topic searching. It will retrieve relevant data for any 1st party products, like Microsoft Purview, Intune, Entra, Defender, and other Microsoft 365 products."
+    },
+    {
+      "name": "CloudPC",
+      "description": "Skills for Windows 365, looking up Cloud PCs that are specific status, getting Cloud PC insights, troubleshooting Cloud PC issues"
+    },
+    {
+      "name": "M365",
+      "description": "Skills that interact with the Microsoft 365 Defender APIs."
+    },
+    {
+      "name": "Purview",
+      "description": "Skills that interact with the Microsoft 365 Purview APIs."
+    },
+    {
+      "name": "ValenceSecurity",
+      "description": "Leverage the Valence SaaS Security Platform API to enhance your investigation with data from SaaS applications such as Salesforce, GitHub, Okta, Google Workspace and dozens others. Answer critical questions to understand your existing SaaS threats and suspicious activities, what access level your human and non-human identities have, where your business-critical data is potentially exposed, and what are the most significant SaaS risks you should prioritize to fix."
+    },
+    {
+      "name": "NetskopeReportingforThreatandDataProtection",
+      "description": "The API plugin offers skills that range from displaying Netskope Alerts and Events for Threat Hunting and Data Protection."
+    },
+    {
+      "name": "CywareRespond",
+      "description": "Use this skillset to call Cyware Respond APIs to perform actions across the Cyware Respond platform.\n- This skill invokes Cyware Respond's REST API\n- In the all the APIs\n  - You **should always** show the Incident UUID in the response and show the user. This will be required to add / act on the incident in future prompts\n  - You **should always** ensure to include key fields such as Title, Description, Status, Readable ID, Unique ID, Motives and the others you deem fit for listing / searching incidents\n  - When getting particular details about a component, You **should always** Ensure to include key info such as Title, Description, Status, Readable ID, Unique ID, Motives, Related Applications, Related Software's, Related Users, Related Malware and Related IOCs and the others you deem fit"
+    },
+    {
+      "name": "MSGraph",
+      "description": null
+    },
+    {
+      "name": "Sentinel",
+      "description": "Skills that interact with Microsoft Sentinel."
+    },
+    {
+      "name": "Tanium",
+      "description": "Provide analysts of all skill levels tools to make informed decisions and confidently take decisive actions using Tanium's real-time endpoint data."
+    },
+    {
+      "name": "Microsoft.M365D.PhishingTriageAgent",
+      "description": "Phishing Triage Agent"
+    },
+    {
+      "name": "ServiceNow",
+      "description": "Skills that interact with ServiceNow. Published by Microsoft."
+    },
+    {
+      "name": "SGNL",
+      "description": "Evaluate Access Decisions in SGNL with Microsoft Copilot for Security"
+    },
+    {
+      "name": "AzureAiSearch",
+      "description": "Skills that interact with Azure Ai Search"
+    },
+    {
+      "name": "Surface",
+      "description": "Warranty summary, support ticket status, service request status and device health insights"
+    },
+    {
+      "name": "RedCanary",
+      "description": "Enhance your security operations with this plugin, designed to seamlessly retrieve data from the Red Canary platform via its API. Features include:\n- Telemetry: Access detection data, alerts, and investigative findings.\n- Endpoints: Locate endpoints using name, ID, or other identifiers. \n- Users: Search for user profiles by name, ID, or username.\n- Threats: Gather detailed threat intelligence, insights, and indicators of compromise.\n- Platform Insights: Explore platform-specific analytics such as user logins and events ingested and investigated."
+    },
+    {
+      "name": "AzureFirewall",
+      "description": "Skills related to firewall Intrusion Detection and Prevention System (IDPS) signature analysis, fleet-wide IDPS signature investigation and security guidance"
+    },
+    {
+      "name": "CyberArk",
+      "description": "Plugin allows interaction with CyberArk Privilege Cloud service for managing privileged accounts."
+    },
+    {
+      "name": "Jamf",
+      "description": "Use this plugin for access to Jamf’s macOS inventory insights, providing an accelerated and more informed threat response for IT and Security teams. The user will provide the device serial number and with it, you can retrieve specific information about the device managed by Jamf Pro."
+    },
+    {
+      "name": "ThreatIntelligence.DTI",
+      "description": "Skills that query Microsoft Defender Threat Intelligence, such as looking up threat intelligence articles, intel profiles, actors, tools, SSL certificates, web components, cookies, DNS records by hostname or ip address."
+    },
+    {
+      "name": "ReversingLabsSpectraIntelligence",
+      "description": "Supplies analysts with rich context about a file hash from ReversingLabs Spectra Intelligence."
+    },
+    {
+      "name": "ThreatIntelligence.DTIAgents",
+      "description": "Agents For Threat Intelligence"
+    },
+    {
+      "name": "Shodan",
+      "description": "Integrates the powerful Shodan search engine into Security Copilot, allowing users to search for and analyze internet-connected devices, networks, and services to identify potential security vulnerabilities and monitor network infrastructure."
+    },
+    {
+      "name": "CodeExecutor",
+      "description": "Skills for  uploading files, downloading files, listing files and executing code in a sandboxed environment."
+    },
+    {
+      "name": "Darktrace",
+      "description": "Skills that interact with the Darktrace API."
+    },
+    {
+      "name": "AbuseIPDB",
+      "description": "Use this skillset to call the AbuseIPDB API if the user provides a given IP and wants to know more or report or check known blocklisted IP addresses using AbuseIPDB record:\n- What it does: Assess the likelihood of IP address being associated with abusive or blocklisted activities.Report potentially harmful IP addresses.\n- To what categories does it belong: proxy/VPN, CDN exit node, Legit security scanner, etc.\n- For how long it has been reported by users on abuseipdb records.\n- The confidence level of the IP address.\nAbuseIPDB's API presents the below functions:\n- Check IP Address: The \"check\" endpoint accepts an IP address (v4 or v6) and an optional \"maxAgeInDays\" parameter to specify the timeframe for reports. It provides information about the queried IP, including version, country/region, usage type, ISP, and domain. Abusive reports are included.\n- Report IP Address: The \"reports\" endpoint takes an IP address (v4 or v6) and optional parameters for date range and pagination. Information is found in the \"data\" property.\n- List BlockListed Ip Addresses: The endpoint lists IP addresses most reported by AbuseIPDB users with or without additional filters. Entries include IP, abuse score, and last report timestamp, sorted by score and timestamp.\n- Check Network Block: The \"check-block\" endpoint takes a subnet in CIDR notation (v4 or v6) and uses the \"maxAgeInDays\" parameter to specify the age of reports to consider. The response, stored in the \"data\" property, provides details about the queried network, including its netmask, possible hosts count, and address space description. URL-encode the network due to forward slashes in CIDR notation."
+    },
+    {
+      "name": "Intel471",
+      "description": "Delivers unique high fidelity cyber threat intelligence related to adversaries, malware, vulnerabilities and breaches"
+    },
+    {
+      "name": "Microsoft.SecurityCopilot.AppRiskAgent",
+      "description": "The App Risk agent will automatically identify and help remediate unused apps to reduce attack surface area. The agent creates manual or automated reports for you based on Microsoft Entra data in your tenant. Upon your approval, it can email unused app owners on your behalf to guide them towards remediation."
+    },
+    {
+      "name": "ShodanInternetDB",
+      "description": "The free Shodan InternetDB API provides a fast way to see the open ports for an IP address."
+    },
+    {
+      "name": "CIRCL",
+      "description": "Use this skillset to call the CIRCL hash lookup service, empowering users to verify file hashes against CIRCL's database.\n- What it does: Retrieves file information from the CIRCL's databases based on a file in either MD5, SHA-1, or SHA-256 hash format. \n- To what categories does it belong: file hash lookup, file search, MD5, SHA-1, SHA-256.\n- Lookup information on CIRCL about a specific MD5 hash\n- Lookup information on CIRCL about a specific SHA-1 hash\n- Lookup information on CIRCL about a specific SHA-256 hash\n- Bulk search on CIRCL of MD5 hashes\n- Bulk search on CIRCL of SHA-1 hashes\n- Published by Microsoft"
+    },
+    {
+      "name": "UrlScan",
+      "description": "Skills that interact with UrlScan API. Published by Microsoft."
+    },
+    {
+      "name": "CrowdSecTI",
+      "description": "This plugin offers skills to interact with the CrowdSec Threat Intelligence API, enriching IP addresses with comprehensive insights. \nIt delivers IP reputation, based on observed malicious behaviors, and provides analyses its activities.\n\nKey insights include:\n\n- Curated IP and IP range reputations\n- Background noise level assessment\n- Detailed records of malicious behaviors and attack details\n- MITRE techniques associated with the IP\n- Countries targeted by the attacker\n- Classification of the attacker\n- Historical activity and aggressiveness metrics (covering the past 24h, 7 days, 30 days, and overall)\n\nPublished by CrowdSec"
+    },
+    {
+      "name": "Visualization",
+      "description": "Skills that aid in generating guided data visualizations"
+    },
+    {
+      "name": "GreyNoiseCommunity",
+      "description": "Use this skill-set to call the GreyNoise API if the user provides a given IP and wants to know assess the likelihood of the IP address being associated with mass internet scanning.\n- This skill only invokes the GreyNoise Community API.\n- LookupIpAddressNoise: Gets noise information about an IP address (v4 only). Internet scanning activity is provided by GreyNoise if an IP has been observed scanning by the GreyNoise sensor network and is associated with malicious activities.\n- Classifies the IP address as benign, suspicious, or malicious\n- Presents the last time the IP address was observed\n- Published by Microsoft and GreyNoise"
+    },
+    {
+      "name": "WAF",
+      "description": "Skillset to analyze WAF (Global and Regional Web Application Firewall) logs and provide better observability to user using context."
+    },
+    {
+      "name": "Web",
+      "description": "Skills to fetch public content from the internet"
+    }
+  ]
+}

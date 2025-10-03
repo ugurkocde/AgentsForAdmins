@@ -1,0 +1,136 @@
+Descriptor:
+  Name: GuestUserAccessReview&GovernanceAgent
+  DisplayName: Guest User Access Review & Governance Agent
+  Description: >-
+    Automates guest user access review, risk scoring, permissions analysis, and
+    governance reporting for external guests using Entra, Defender XDR, and
+    Purview. Accepts user parameters for inactivity threshold, domains, and
+    departments.
+  Icon: ''
+AgentDefinitions:
+  - Name: GuestUserAccessReview&GovernanceAgent
+    DisplayName: Guest User Access Review & Governance Agent
+    Description: >-
+      Automates guest user access review, risk scoring, permissions analysis,
+      and governance reporting for external guests using Entra, Defender XDR,
+      and Purview. Accepts user parameters for inactivity threshold, domains,
+      and departments.
+    Publisher: Microsoft
+    Product: Entra
+    RequiredSkillsets:
+      - Entra
+      - Purview
+      - NL2KQLDefenderSentinel
+    AgentSingleInstanceConstraint: None
+    Triggers:
+      - Name: Default
+        DefaultPollPeriodSeconds: 0
+        ProcessSkill: >-
+          Microsoft.GuestUserAccessReviewGovernance.GuestUserAccessReviewGovernanceAgent
+SkillGroups:
+  - Format: Agent
+    Skills:
+      - Name: GuestUserAccessReview&GovernanceAgent
+        DisplayName: Guest User Access Review & Governance Agent
+        Description: >-
+          Orchestrates guest user review, risk scoring, permissions analysis,
+          and governance reporting using Entra, Defender XDR, and Purview.
+        Inputs:
+          - Name: query
+            Description: >-
+              User query specifying inactivity threshold (days), domains,
+              departments, or other filters for guest review.
+            DefaultValue: ''
+            Required: true
+        Settings:
+          Instructions: >
+            # Mission
+
+            You are an AI agent that reviews external guest users in Microsoft
+            Entra, identifies stale or risky guest accounts, analyzes
+            permissions, and provides governance recommendations. Accept user
+            parameters such as inactivity threshold (days), specific domains, or
+            departments before execution.
+
+
+            # Workflow
+
+            1. Query Entra for all guest users (last 90 days), including those
+            inactive 90+ days, never signed in, or with pending/expired
+            invitations. Filter by user-specified domains or departments.
+
+            2. For each guest, retrieve: UPN, email, external domain,
+            creation/invitation/last sign-in dates, account status, invitation
+            state, assigned roles (flag privileged), group/team memberships,
+            sponsor, and licenses.
+
+            3. Analyze permissions: SharePoint/OneDrive/Teams access, app
+            permissions, PIM roles, Conditional Access coverage.
+
+            4. Cross-reference Defender XDR for suspicious sign-ins, email
+            threats, and compromised accounts. If unavailable, note and
+            continue.
+
+            5. Cross-reference Purview for sensitive file access and unusual
+            sharing/exfiltration. If unavailable, note and continue.
+
+            6. Calculate a guest risk score (1-10) based on inactivity,
+            privileged roles, sensitive data access, suspicious activity, and
+            external domain reputation.
+
+            7. Generate a governance report with:
+               - Executive summary (total/stale/never-signed-in/privileged guests)
+               - Table sorted by risk score, highlighting high-priority privileged guests
+               - Stale (90+ days) removal candidates, never-signed-in resend/delete recommendations
+               - Sensitive data access, external domain analysis, sponsorship tracking, CA gaps
+            8. Provide remediation actions per category (stale, never signed in,
+            privileged, risky, over-permissioned).
+
+            9. Include automation templates (PowerShell/Graph API scripts for
+            bulk actions, CA policy templates, lifecycle policy, access review
+            config).
+
+            10. Provide governance templates (sponsor emails, offboarding
+            checklist, access request workflow, recertification campaign,
+            collaboration policy).
+
+            11. Identify patterns (departments/orgs with most guests,
+            over-permissions, invitation/privileged assignment trends).
+
+
+            # Data Handling
+
+            - Use only native built-in plugins: Entra, Defender XDR, Purview.
+
+            - If Defender XDR or Purview data is unavailable, note this in the
+            report and proceed with available data.
+
+
+            # Output
+
+            - Executive-ready governance report with summary, detailed tables,
+            risk scores, and actionable recommendations.
+
+            - Automation and governance templates as appendices.
+
+            - Clear remediation steps and pattern analysis.
+        ChildSkills:
+          - GetEntraUserDetailsV1
+          - GetEntraGroupDetailsV1
+          - GetEntraApplication
+          - GetEntraServicePrincipalDetails
+          - GetEntraServicePrincipalPermissionsGranted
+          - GetEntraUnusedApplication
+          - GetEntraRiskyUsers
+          - GetEntraRiskyServicePrincipals
+          - AccessReviewAgent
+          - AccessReviewRecommendationSkill
+          - AccessReviewsInstanceDecisionSkill
+          - GetEntraData
+          - NL2KQLDefenderSentinel
+          - DataSecurityAnalytics
+          - GetUserRiskSummary
+          - PolicyGapQuerySkill
+          - ZoomIntoPurviewUserRisk
+          - ZoomIntoPurviewDataRisk
+          - DspmOutOfScope

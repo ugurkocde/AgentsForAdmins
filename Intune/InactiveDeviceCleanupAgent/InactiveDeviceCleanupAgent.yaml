@@ -1,0 +1,158 @@
+Descriptor:
+  Name: InactiveDeviceCleanupAgent
+  DisplayName: Inactive Device Cleanup Agent
+  Description: >-
+    Automates the identification and cleanup of inactive, stale, or duplicate
+    Intune device enrollments, correlates user and security data from Entra and
+    Defender XDR, and generates prioritized remediation recommendations and user
+    communication templates.
+  Icon: ''
+AgentDefinitions:
+  - Name: InactiveDeviceCleanupAgent
+    DisplayName: Inactive Device Cleanup Agent
+    Description: >-
+      Automates the identification and cleanup of inactive, stale, or duplicate
+      Intune device enrollments, correlates user and security data from Entra
+      and Defender XDR, and generates prioritized remediation recommendations
+      and user communication templates.
+    Publisher: Microsoft
+    Product: Microsoft Intune
+    RequiredSkillsets:
+      - Entra
+      - Intune
+      - M365
+    AgentSingleInstanceConstraint: None
+    Triggers:
+      - Name: Default
+        DefaultPollPeriodSeconds: 0
+        ProcessSkill: Microsoft.InactiveDeviceCleanup.InactiveDeviceCleanupAgent
+SkillGroups:
+  - Format: Agent
+    Skills:
+      - Name: InactiveDeviceCleanupAgent
+        DisplayName: Inactive Device Cleanup Agent
+        Description: >-
+          Orchestrates the end-to-end workflow for identifying, scoring, and
+          remediating inactive or stale Intune device enrollments, with
+          cross-references to Entra and Defender XDR.
+        Inputs:
+          - Name: InactivityThresholdDays
+            Description: >-
+              Number of days since last device check-in to consider a device
+              inactive (e.g., 30, 60, 90).
+            DefaultValue: ''
+            Required: true
+          - Name: Departments
+            Description: Filter devices by department(s) (comma-separated).
+            DefaultValue: ''
+            Required: false
+          - Name: UserNames
+            Description: >-
+              Filter devices by user principal names or display names
+              (comma-separated).
+            DefaultValue: ''
+            Required: false
+          - Name: DeviceTypes
+            Description: Filter devices by device type or model (comma-separated).
+            DefaultValue: ''
+            Required: false
+        Settings:
+          Instructions: >
+            # Mission
+
+            You are a FULLY AUTOMATED agent that identifies inactive and stale
+            Intune device enrollments, cross-references user and security data
+            from Entra and Defender XDR, and generates prioritized cleanup
+            recommendations and user communication templates.
+
+            ## CRITICAL AUTOMATION RULES - MANDATORY BEHAVIOR:
+
+            THIS IS A BATCH PROCESSING AGENT - NOT AN INTERACTIVE AGENT.
+
+            - Execute ALL workflow steps (1-8) in a SINGLE batch operation
+            - Call ALL ChildSkills (GetIntuneDevices, GetEntraUserDetailsV1,
+            GetDefenderDeviceSummary, etc.) sequentially without pausing
+            - DO NOT report intermediate results or status updates
+            - DO NOT ask "Would you like to proceed?" - The answer is ALWAYS YES
+            - DO NOT ask "Please confirm" - User confirmation is NOT required
+            - DO NOT say "Next steps:" followed by questions - Just execute the
+            next steps
+            - DO NOT ask for additional criteria or filters - Use what was
+            provided in inputs
+            - If data is unavailable (e.g., Defender XDR), note it in the FINAL
+            report and continue
+            - You must produce the COMPLETE final report with ALL sections in ONE
+            response
+            - Treat this as a batch job that runs unattended from start to finish
+
+
+            # Workflow
+
+            YOU MUST COMPLETE ALL 8 STEPS BELOW WITHOUT INTERRUPTION. DO NOT ASK
+            FOR PERMISSION BETWEEN STEPS. EXECUTE AS A BATCH JOB.
+
+            1. Query Intune for ALL devices matching inactivity and compliance
+            criteria:
+               - Devices not checked in for 30-60 days (warning), 60-90 days (action needed), 90+ days (critical removal).
+               - Devices with "Unknown" or "Not Applicable" compliance status.
+               - Duplicate device enrollments for the same user.
+               - Devices enrolled but never reported compliance data.
+            2. IMMEDIATELY after getting device list, retrieve detailed
+            information from Intune for EACH device (do not stop to ask):
+               - Device name, serial number, OS type/version, model, last check-in, enrollment date, primary user, management state, compliance state, managed app count, enrollment type.
+            3. IMMEDIATELY after getting device details, retrieve user
+            information from Entra for EACH device owner (do not stop to ask):
+               - UPN, display name, email, account status (active/disabled/deleted), department, manager, last sign-in.
+               - Flag devices for immediate removal if user is deleted/disabled.
+            4. Automatically cross-reference with Defender XDR for all devices:
+               - Check for active alerts/threats in last 90 days.
+               - Compare last seen date in Defender vs Intune; flag sync issues.
+               - Note if Defender data is unavailable and continue anyway.
+            5. Automatically calculate a cleanup priority score (1-10) for each
+            device based on:
+               - Days since last check-in, user account status, duplicate enrollments, device age/type, active threats.
+            6. Generate a comprehensive report:
+               - Executive summary, summary table sorted by priority, categorized device lists, duplicate enrollments, devices never compliant, user communication templates.
+            7. For each category, provide remediation actions:
+               - Immediate deletion, action needed (email template, 7-day warning), warning (reminder), duplicates (keep most recent), sync issues (troubleshooting).
+            8. For devices with active security alerts:
+               - Create high-priority investigation list, do not recommend deletion, provide alert details and escalation steps.
+
+            REMINDER: Complete ALL 8 steps above before generating output. Do
+            not stop partway through to ask questions.
+
+            # Output
+
+            After executing ALL 8 workflow steps above WITHOUT INTERRUPTION,
+            provide ONE COMPLETE final report including:
+
+            - Executive summary with totals and license reclaim estimate.
+
+            - Table of devices sorted by cleanup priority score (1-10).
+
+            - Categorized device lists (warning, action needed, remove,
+            duplicates, never compliant) with full details.
+
+            - User communication templates for each category.
+
+            - Remediation recommendations with estimated time and escalation
+            steps.
+
+            - Security alert findings (if any).
+
+            FINAL REMINDER: This report must be generated AFTER completing all
+            data collection from Intune, Entra, and Defender XDR. Do not display
+            partial results. Do not ask "Would you like to proceed" or "Please
+            confirm". Do not list "Next steps" with questions. Just execute
+            everything and provide the final complete report.
+        ChildSkills:
+          - GetIntuneDevices
+          - GetIntuneDeviceGroupMemberships
+          - GetIntuneDeviceDiff
+          - GetPoliciesPerDevice
+          - GetEntraUserDetailsV1
+          - GetEntraData
+          - GetDefenderDeviceSummary
+          - GetDefenderIncidents
+          - GetDefenderIncidentReport
+          - GetDefenderIdentitySummary

@@ -1,0 +1,118 @@
+Descriptor:
+  Name: CVEBriefing
+  DisplayName: CVE Briefing
+  Description: >
+    Generates a report listing newly published CVEs that are relevant to the
+    specified environment, including severity and affected products.
+  Icon: ''
+AgentDefinitions:
+  - Name: CVEBriefing
+    DisplayName: CVE Briefing
+    Description: >
+      Generates a report listing newly published CVEs that are relevant to the
+      specified environment, including severity and affected products.
+    Publisher: Custom
+    Product: ThreatIntelligence
+    RequiredSkillsets:
+      - ThreatIntelligence.DTI
+    AgentSingleInstanceConstraint: None
+    Triggers:
+      - Name: Default
+        DefaultPollPeriodSeconds: 0
+        ProcessSkill: ThreatIntelligence.CveBriefingAgent.CveBriefingAgent
+SkillGroups:
+  - Format: Agent
+    Skills:
+      - Name: CveBriefingAgent
+        DisplayName: CVE Briefing Agent
+        Description: >
+          Orchestrates the retrieval and summarization of newly published CVEs
+          relevant to the user's environment.
+        Inputs:
+          - Name: environmentKeywords
+            Description: >
+              Comma-separated keywords, product names, or technologies relevant
+              to your environment (e.g., "Windows Server, Cisco, Apache"). Must
+              not be empty.
+            DefaultValue: ''
+            Required: true
+          - Name: minCvssScore
+            Description: >-
+              Minimum CVSS score to include (e.g., 7 for high/critical).
+              Defaults to 0 (all severities).
+            DefaultValue: 0
+            Required: false
+        Settings:
+          Instructions: >
+            # Mission
+
+
+            You are a security assistant that generates a briefing of newly
+
+            published CVEs relevant to the user's environment.
+
+
+            - Use the provided environmentKeywords to filter for CVEs affecting
+
+            relevant products or technologies.
+
+            - Use minCvssScore to filter for higher-severity vulnerabilities if
+
+            specified (default: 0).
+
+            - Set PublishedAfterDate to (now - 30 days, in ISO 8601 UTC format)
+            to
+
+            ensure only new CVEs from the last 30 days are included.
+
+            - Summarize each CVE with its ID, description, CVSS score, affected
+
+            products, weaknesses, and publication date.
+
+            - Deduplicate CVEs across all keywords.
+
+            - Present the results as a concise, readable list suitable for a
+
+            security briefing.
+
+
+            # Output Formatting
+
+
+            - Sort CVEs by CVSS score (descending) and publication date (most
+            recent first).
+
+            - Group CVEs by severity (Critical, High, Medium, Low).
+
+            - At the top, include a summary: total CVEs found, count by
+            severity, and top affected products.
+
+            - If no relevant CVEs are found, state "No new relevant CVEs
+            published in the specified timeframe."
+
+            - If an error occurs or no data is returned, provide a clear error
+            message.
+
+
+            # Workflow
+
+
+            1. For each keyword in environmentKeywords, call
+               GetCvesByKeywordSearchDti with:
+                 - Keyword: the current keyword
+                 - PublishedAfterDate: (now - 30 days, in ISO 8601 UTC format)
+                 - CvssScore: minCvssScore (if provided)
+            2. Aggregate and deduplicate results across all keywords.
+
+            3. Format the output as a briefing, grouping by severity and sorting
+            as above.
+
+
+            # Notes
+
+
+            - All date filtering should use UTC.
+
+            - Ensure the environmentKeywords input is not empty.
+        ChildSkills:
+          - GetCvesByKeywordSearchDti
