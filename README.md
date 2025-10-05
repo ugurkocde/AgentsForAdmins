@@ -1,9 +1,11 @@
 # Security Copilot Hub
 
-[![Visit SecurityCopilotHub.com](https://img.shields.io/badge/Website-SecurityCopilotHub.com-0078D4?style=for-the-badge&logo=microsoft)](https://securitycopilothub.com)
-[![LinkedIn Community](https://img.shields.io/badge/Join-LinkedIn%20Community-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/groups/15356022/)
-[![Agents Available](https://img.shields.io/badge/Agents-7-success?style=for-the-badge&logo=shield)](#repository-layout)
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-44c767?style=for-the-badge&logo=github)](#contributing)
+<p align="center">
+  <a href="https://securitycopilothub.com"><img src="https://img.shields.io/badge/Hub-SecurityCopilotHub.com-0078D4?style=for-the-badge&logo=microsoft" alt="Visit SecurityCopilotHub.com"></a>
+  <a href="https://www.linkedin.com/groups/15356022/"><img src="https://img.shields.io/badge/Join-LinkedIn%20Community-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn Community"></a>
+  <a href="#repository-layout"><img src="https://img.shields.io/badge/Agents-Available-success?style=for-the-badge&logo=shield" alt="Agents Available"></a>
+  <a href="#contributing"><img src="https://img.shields.io/badge/Contributions-Welcome-44c767?style=for-the-badge&logo=github" alt="Contributions Welcome"></a>
+</p>
 
 Security Copilot Hub is a community-driven catalog of ready-to-use agents for the Microsoft Security Copilot portal. Each agent is packaged so security teams can quickly import proven workflows into their tenant or contribute new ones for others to use.
 
