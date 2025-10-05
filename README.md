@@ -9,8 +9,6 @@
 
 Security Copilot Hub is a community-driven catalog of ready-to-use agents for the Microsoft Security Copilot portal. Each agent is packaged so security teams can quickly import proven workflows into their tenant or contribute new ones for others to use.
 
----
-
 ## What You Can Do
 
 - Browse product-focused agent collections for Microsoft Defender, Entra, and Intune scenarios.
@@ -20,8 +18,6 @@ Security Copilot Hub is a community-driven catalog of ready-to-use agents for th
 
 > 💡 **Learn more:** The live catalog with screenshots and walk-throughs is available at [SecurityCopilotHub.com](https://securitycopilothub.com).
 
----
-
 ## Quick Start: Importing an Agent
 
 1. Pick an agent folder (for example `Defender/ThreatHuntingAgent`).
@@ -29,8 +25,6 @@ Security Copilot Hub is a community-driven catalog of ready-to-use agents for th
 3. Sign in to the Security Copilot portal and choose **Agents → Import**.
 4. Upload the agent's `.yaml` file. If the folder includes an icon (`.png`), you can add it during import.
 5. Save the agent and run it with a representative query to validate the end-to-end flow.
-
----
 
 ## Repository Layout
 
@@ -43,9 +37,6 @@ Security Copilot Hub is a community-driven catalog of ready-to-use agents for th
 Each agent folder contains at minimum:
 
 - `*.yaml` – The importable agent definition for Security Copilot (required).
-- `*.png` – Optional icon shown inside the Security Copilot portal gallery.
-
----
 
 ## Creating a New Agent
 
@@ -55,18 +46,11 @@ Each agent folder contains at minimum:
 4. Add your agent's `.yaml` file to the new folder. Name the file to match the agent (for example `MyNewAgent.yaml`).
 5. Import the YAML into your own tenant and confirm the workflow runs as expected before opening a pull request.
 
-> Optional: Include an icon (`.png`) in the same folder to brighten the gallery tile. No other supporting files are required for contributions.
-
----
-
 ## Validation Checklist
 
 - [ ] YAML imports without errors in the Security Copilot portal.
 - [ ] Agent executes successfully with a realistic test query.
 - [ ] Description and inputs in the YAML clearly state any prerequisites or required skillsets.
-- [ ] Optional icon displays correctly in the portal tile preview.
-
----
 
 ## Contributing
 
@@ -79,17 +63,3 @@ Community contributions are welcome! To add a new agent:
 5. Submit a pull request describing the scenario and how you validated it.
 
 Please avoid modifying shared metadata files or adding prompt/test templates—this project focuses solely on import-ready agent packages.
-
-If you want your agent showcased on [SecurityCopilotHub.com](https://securitycopilothub.com), mention it in your PR or contact the site maintainers after merge.
-
----
-
-## Resources
-
-- [Security Copilot documentation](https://learn.microsoft.com/security-copilot/)
-- [Security Copilot community forum](https://learn.microsoft.com/answers/tags/339/security-copilot)
-- [Microsoft Defender XDR documentation](https://learn.microsoft.com/defender-xdr/)
-- [Microsoft Entra documentation](https://learn.microsoft.com/entra/)
-- [Microsoft Intune documentation](https://learn.microsoft.com/intune/)
-
-Stay updated as new agents are added—star or watch this repository to follow along.
