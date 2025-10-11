@@ -1,0 +1,119 @@
+name: Sync Agents to Supabase
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.yaml'
+      - '**/*.yml'
+      - '**/changelog.md'
+      - '.github/scripts/sync-agents-to-supabase.js'
+      - '.github/workflows/sync-to-supabase.yml'
+  workflow_dispatch:
+    inputs:
+      force_full_sync:
+        description: 'Force full sync of all agents'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  sync-agents:
+    runs-on: ubuntu-latest
+    name: Sync Security Copilot Agents to Supabase
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2  # Need previous commit to detect changes
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: '.github/scripts/package-lock.json'
+
+    - name: Install dependencies
+      working-directory: .github/scripts
+      run: npm ci
+
+    - name: Get changed files
+      id: changed-files
+      if: github.event_name == 'push' && github.event.inputs.force_full_sync != 'true'
+      run: |
+        # Get list of changed agent files
+        CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E '\.(yaml|yml)$|changelog\.md$' | grep -E '^(Defender|Entra|Intune|Purview)/' || echo "")
+
+        if [ -z "$CHANGED_FILES" ]; then
+          echo "No agent files changed"
+          echo "files=" >> $GITHUB_OUTPUT
+        else
+          # Convert to JSON array format for the script
+          FILES_JSON=$(echo "$CHANGED_FILES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "files=$FILES_JSON" >> $GITHUB_OUTPUT
+          echo "Changed files: $CHANGED_FILES"
+        fi
+
+    - name: Sync agents to Supabase
+      working-directory: .github/scripts
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CHANGED_FILES: ${{ steps.changed-files.outputs.files }}
+        FORCE_FULL_SYNC: ${{ github.event.inputs.force_full_sync }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_SHA: ${{ github.sha }}
+        GITHUB_RUN_ID: ${{ github.run_id }}
+        GITHUB_RUN_NUMBER: ${{ github.run_number }}
+      run: node sync-agents-to-supabase.js
+
+    - name: Upload sync log
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: sync-log-${{ github.run_number }}
+        path: .github/scripts/sync-log.json
+        retention-days: 30
+
+    - name: Comment on commit (if sync failed)
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const fs = require('fs');
+          let errorMessage = 'Agent sync to Supabase failed. Check the workflow logs for details.';
+
+          // Try to read sync log for more details
+          try {
+            const syncLog = JSON.parse(fs.readFileSync('.github/scripts/sync-log.json', 'utf8'));
+            if (syncLog.errors && syncLog.errors.length > 0) {
+              errorMessage += '\n\nErrors:\n' + syncLog.errors.map(e => `- ${e.agentId}: ${e.error}`).join('\n');
+            }
+          } catch (e) {
+            // Ignore if sync log doesn't exist
+          }
+
+          await github.rest.repos.createCommitComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            commit_sha: context.sha,
+            body: `⚠️ **Agent Sync Failed**\n\n${errorMessage}\n\n[View workflow run](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
+          });
+
+    - name: Create issue on repeated failures
+      if: failure() && github.run_attempt > 2
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: 'Agent Sync to Supabase Repeatedly Failing',
+            body: `The agent sync workflow has failed multiple times.\n\n**Commit:** ${context.sha}\n**Run:** [${context.runId}](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})\n\nPlease investigate and fix the sync issue.`,
+            labels: ['bug', 'sync-failure']
+          });

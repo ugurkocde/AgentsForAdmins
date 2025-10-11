@@ -11,7 +11,7 @@ Security Copilot Hub is a community-driven catalog of ready-to-use agents for th
 
 ## What You Can Do
 
-- Browse product-focused agent collections for Microsoft Defender, Entra, and Intune scenarios.
+- Browse product-focused agent collections for Microsoft Defender, Entra, Intune, and Purview scenarios.
 - Import the YAML definitions directly into https://securitycopilot.microsoft.com to light up automated investigations, posture assessments, and governance reports.
 - Review each agent's YAML to understand required inputs, skillsets, and workflow steps before running it in your tenant.
 - Fork the project, add your own agents, and help expand the community directory on https://securitycopilothub.com.
@@ -33,6 +33,7 @@ Security Copilot Hub is a community-driven catalog of ready-to-use agents for th
 | `Defender/` | Agents that orchestrate Microsoft Defender XDR and related threat-intel skills.                |
 | `Entra/`    | Agents focused on identity governance, access reviews, and risk management in Microsoft Entra. |
 | `Intune/`   | Agents targeting endpoint hygiene, compliance, and lifecycle tasks powered by Intune.          |
+| `Purview/`  | Agents for data loss prevention, insider risk, and compliance management in Microsoft Purview.  |
 
 Each agent folder contains at minimum:
 
@@ -50,15 +51,16 @@ Each agent folder contains at minimum:
 | **Entra** | [Privileged Access Management Review Agent](Entra/PrivilegedAccessManagementAgent) | Reviews privileged role assignments, PIM configurations, and admin account security to identify and remediate over-privileged access, enforce PIM adoption, and generate governance reports with reme... |
 | **Intune** | [Endpoint Security & Compliance Posture Agent](Intune/EndpointSecurityCompliancePostureAgent) | Automates the monitoring and reporting of endpoint security and compliance posture, correlating device, alert, vulnerability, and user data to generate actionable compliance reports with risk scori... |
 | **Intune** | [Inactive Device Cleanup Agent](Intune/InactiveDeviceCleanupAgent) | Automates the identification and cleanup of inactive, stale, or duplicate Intune device enrollments, correlates user and security data from Entra and Defender XDR, and generates prioritized remedia... |
+| **Purview** | [Data Loss Prevention Incident Response Agent](Purview/DLPIncidentResponseAgent) | Automates DLP policy violation monitoring, triaging, and response by correlating incidents with user risk scores, data sensitivity, and insider risk indicators. Generates investigation workflows, c... |
 
-*Total Agents: 7*
+*Total Agents: 8*
 
 <!-- AGENTS-TABLE-END -->
 
 ## Creating a New Agent
 
 1. Fork this repository.
-2. Choose the product area (`Defender/`, `Entra/`, or `Intune/`).
+2. Choose the product area (`Defender/`, `Entra/`, `Intune/`, or `Purview/`).
 3. Inside that folder, create a new subfolder named after your agent (for example `Defender/MyNewAgent`).
 4. Add your agent's `.yaml` file to the new folder. Name the file to match the agent (for example `MyNewAgent.yaml`).
 5. Import the YAML into your own tenant and confirm the workflow runs as expected before opening a pull request.

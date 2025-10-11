@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 
 # Service directories to scan
-SERVICE_DIRS = ['Defender', 'Entra', 'Intune']
+SERVICE_DIRS = ['Defender', 'Entra', 'Intune', 'Purview']
 
 def find_agent_yamls():
     """Find all agent YAML files in service directories."""

@@ -1,0 +1,17 @@
+{
+  "name": "security-copilot-hub-sync",
+  "version": "1.0.0",
+  "description": "Sync Security Copilot Hub agents to Supabase",
+  "main": "sync-agents-to-supabase.js",
+  "scripts": {
+    "sync": "node sync-agents-to-supabase.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "private": true
+}

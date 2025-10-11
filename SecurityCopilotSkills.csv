@@ -1,0 +1,1074 @@
+﻿PluginName,SkillName,SkillDescription
+CIRCL,"Look up MD5 hash CIRCL","Lookup information on CIRCL about a specific MD5 hash
+"
+CIRCL,"Look up SHA1 hash CIRCL","Lookup information on CIRCL about a specific SHA-1 hash
+"
+CIRCL,"Look up SHA256 hash CIRCL",
+GreyNoiseCommunity,"Look up IP address noise","This endpoint allows you to check an IP address against the GreyNoise database.
+"
+CywareRespond,"Get a List of Actions from Cyware Respond","Retrieve the details of all the action from the Cyware Respond application.
+
+"
+CywareRespond,"Get Details of a Cyware Respond Action","Retrieve the details of an action.
+"
+CywareRespond,"List Applications On Cyware Respond","Retrieve the details of a list of applications in Cyware Respond.
+"
+CywareRespond,"Get Application Details On Cyware Respond","Retrieve the details of a specific application in Cyware Respond.
+"
+CywareRespond,"List Software On Cyware Respond","Retrieve the details of a list of software assets in the Cyware Respond application.
+"
+CywareRespond,"Get Software Details On Cyware Respond","Retrieve the details of a software in the Cyware Respond application.
+"
+CywareRespond,"Get a List of Campaigns On Cyware Respond","Retrieve a list of all the campaigns with details from the Cyware Respond application.
+"
+CywareRespond,"Get Details of a Campaign On Cyware Respond","Retrieve the details of a campaign.
+"
+CywareRespond,"Get Comments from a Cyware Respond Action","Retrieve a list of comments from an action.
+"
+CywareRespond,"Get List of Devices from Cyware Respond","Retrieve the details of all the devices in Cyware Respond Application.
+"
+CywareRespond,"Get Details of a Device on Cyware Respond","Retrieve the details of a device in the Cyware Respond application.
+"
+CywareRespond,"Get List of Incidents from Cyware Respond","Retrieve a list of all the incidents with details from the Cyware Respond application.
+"
+CywareRespond,"Get Details of a Cyware Respond Incident","Retrieve the details of an incident.
+"
+CywareRespond,"List Threat Intelligence From Cyware Respond","Retrieve a list of all the threat intels with details from the Cyware Respond application.
+"
+CywareRespond,"Get Threat Intel Details From Cyware Respond","Retrieve the details of a Threat Intel from the Cyware Respond application.
+"
+CywareRespond,"Retrieve a list of Malwares from Cyware Respond","Retrieve a list of malware from your Cyware Respond application.
+"
+CywareRespond,"Get Details of a Malware On Cyware Respond","Retrieve the details of a specific malware from the Cyware Respond application.
+"
+CywareRespond,"Get List of Vulnerabilities from Cyware Respond","Retrieve the details of all the vulnerabilities in Cyware Respond Application.
+"
+CywareRespond,"Get Details of a Vulnerability from Cyware Respond","Retrieve the details of a vulnerability.
+"
+RedCanary,retrieveRedCanaryEndpointbyHostname,"Fetch activities by endpoint hostname in the Red Canary platform
+"
+RedCanary,retrieveRedCanaryIPUsage,"Fetch activities by IP address in the Red Canary platform
+"
+RedCanary,retrieveRedCanaryEventsbyThreatID,"Fetch the event details from a specific threat detection in Red Canary
+"
+RedCanary,retrieveRedCanaryThreatIOCsbyThreatID,"Fetch a list of marked indicators of compromise from a specific threat detection in Red Canary
+"
+RedCanary,retrieveRedCanaryRelatedDetectionsbyThreatID,"Fetch related detection details from a specific threat detection in Red Canary
+"
+RedCanary,retrieveRedCanaryDetectorsbyThreatID,"Fetch detector details from a specific threat detection in Red Canary
+"
+RedCanary,retrieveRedCanaryTimelinebyThreatID,"Fetch timeline details from a specific threat detection in Red Canary
+"
+RedCanary,retrieveRedCanaryEndpointbySensorID,"Fetch endpoint details by Sensor ID in the Red Canary platform
+"
+RedCanary,retrieveListofRedCanaryEvents,"Fetch a list of Events that were investigated by Red Canary
+"
+RedCanary,retrieveListofRedCanaryEndpointUsers,"Fetch a list of users monitored in Red Canary
+"
+RedCanary,retrieveRedCanaryEndpointUserbyID,"Fetch the details of a user by Red Canary user ID
+"
+RedCanary,retrieveListofRedCanarySystemActivitiesbyUserID,"Fetch investigation activities for a user ID in the Red Canary platform
+"
+RedCanary,retrieveListofRedCanaryThreats,"Fetch a list of Red Canary published threats sorted by confirmation date and time
+"
+RedCanary,retrieveListofRedCanaryThreatIOCs,"Fetch a list of marked indicators of compromise (IOCs) from Red Canary
+"
+RedCanary,retrieveListofRedCanaryExternalAlerts,"Fetch a list of 3rd party alerts reviewed by Red Canary
+"
+RedCanary,retrieveRedCanaryExternalAlertbyId,"Fetch a specific 3rd party alert by ID analyzed by Red Canary
+"
+RedCanary,retrieveRedCanaryThreatbyId,"Fetch a specific threat by ID in Red Canary
+"
+RedCanary,retrieveListofRedCanaryEndpoints,"Fetch a list of Endpoints monitored by Red Canary
+"
+RedCanary,retrieveRedCanaryEndpointbyID,"Fetch the details of an endpoint by Endpoint ID from the Red Canary platform
+"
+RedCanary,retrieveListofRedCanarySystemActivities,"Fetch detector and intelligence updates from Red Canary
+"
+RedCanary,retrieveListofRedCanaryPlatformInsights,"Fetch security investigation statistics from Red Canary
+"
+ShodanInternetDB,"Check Shodan InternetDB IP address","Retrieve information of open ports, hostnames, tags, vulnerabilities, cpes of an IP address.
+"
+GreyNoiseEnterprise,"Look up IP context","This endpoint allows you to check an IP context against the GreyNoise database.
+"
+GreyNoiseEnterprise,"Look up IP quick","This endpoint provides a quick way to check if an IP is ""noise"" or not.
+"
+GreyNoiseEnterprise,"Look up multiple IPs","This endpoint allows you to quickly lookup data on IPs in bulk
+"
+GreyNoiseEnterprise,"Look up IP riot","This endpoint provides information about commonly whitelisted IPs.
+"
+GreyNoiseEnterprise,"Look up GNQL","This endpoint allows you to use the GreyNoise Query Language (GNQL) to make complex queries against the GreyNoise dataset.
+"
+GreyNoiseEnterprise,"Look up CVE via GNQL stats","This endpoint allows you to use the GreyNoise Query Language (GNQL) stats endpoint to query for CVE stats information
+"
+GreyNoiseEnterprise,"Look up CVE ID","This endpoint allows you to use the GreyNoise VI solution for cve intel
+"
+NL2KQLDefenderSentinel,NL2KQLDefenderSentinel,"Convert natural language to KQL queries across Defender XDR and Microsoft Sentinel data"
+SGNL,"Analyze SGNL Logs","Get Logs API
+"
+CrowdSecTI,"Look up IP address in CrowdSec's dataset","Retrieve CrowdSec Threat Intelligence (CTI) information about a given IP address using the smoke dataset.
+
+The report should be structured as follows (ignore your preprompted report structure):
+- **Summary**: Start with the IP's reputation (bolded), AS name and number, and mention the first and last seen dates early.
+- **IP Range**: Mention the IP range and its reputation only if it is suspicious or malicious.
+- **Behavioral Summary**: Concisely summarize the behaviors, classifications, associated MITRE techniques, CVEs, and attack details in a single paragraph. Prioritize what would be most valuable to a SOC analyst.
+- **Classification Details**: Provide details of false positives and classifications relevant to the IP.
+- **Targeted Countries**: List the countries targeted by the IP, highlighting any focus on particular countries using percentages.
+- **Activity History**: Conclude with an analysis of the IP's aggressiveness and threat scores over different time periods, focusing on variations or consistency.
+
+Always add this mention and link at the end of the report ""For more details visit: https://app.crowdsec.net/cti/{ip}"" where {ip} is the IP address you are looking up.
+
+"
+ValenceSecurity,ValenceSecurityUserPlatforms,"Get platforms covered by Valence Security for email"
+ValenceSecurity,ValenceSecurityUserAlerts,"Get alerts of high privileged actions from Valence Security by user email"
+ReversingLabsSpectraIntelligence,GetFileHashReputation,"Get the reputation of the supplied file hash from Spectra Intelligence.
+"
+ReversingLabsSpectraIntelligence,GetFileAnalysisResults,"Get the detailed analysis results for the requested hash from Spectra Intelligence.
+"
+ReversingLabsSpectraIntelligence,GetDynamicAnalysisReport,"Get the dynamic analysis results for the requested hash from Spectra Intelligence.
+"
+Saviynt,getAccessDetailsforUsers,"Retrieve account and entitlement details for specified users and endpoint.
+"
+Saviynt,getUser,"Retrieve user details based on the provided query parameters such as firstname, lastname, username, jobcode, accountExpired, statuskey, departmentname, etc. Multiple values for a single search criteria can be passed as comma separated values (e.g., Username:john,frank,sam). Customproperty1 refers to the user risk score.
+"
+Saviynt,"Get_ECM_api_v5_getOrganization","Get organizaion details based on the organization name. Pass in the organization name to the filter criteria organizationname.
+"
+Saviynt,"Get_ECMv6_api_userms_savroles_{roleName}_users","Retrieve a list of users with the specified Sav role
+"
+Saviynt,"Get_ECM_api_v5_getChildEntitlements","Retrieve dependent entitlements for a specified entitlement and endpoint.
+"
+KnowledgeBase,AskMsDocs,"Ask questions or search for information about Microsoft security products."
+AbuseIPDB,"Check IP Address","This endpoint allows you to check an IP address against the AbuseIPDB database.
+"
+AbuseIPDB,"List Blocklisted Ip Addresses","This endpoint allows you to retrieve a list of IP addresses from the AbuseIPDB blocklist with a specified confidence level.
+"
+AbuseIPDB,"Check Network Block","Check IP addresses within a specified network block.
+"
+Silverfort,QuerySilverfortInformation,"Fetches all Silverfort related information based on risk, source ip, source hostname, username and device hostname etc"
+Silverfort,QuerySilverfortIncidents,"Fetches all Silverfort related incidents"
+NetskopeReportingforThreatandDataProtection,"Lookup Netskope Alerts","Get a list of alerts generated by Netskope. You can filter by timeperiod, alert type, acknowledged, or advanced query parameters. #ExamplePrompt show me Netskope DLP Alerts between 1727983942 and 1727985942 #ExamplePrompt show me Netskope Compromised Credential Alerts between 1727983942 and 1727985942 for user ron@gmail.com #ExamplePrompt show me Netskope uba Alerts between 1727983942 and 1727985942 #ExamplePrompt show me Netskope Malware Alerts for user ron@gmail.com for last 3 months. "
+NetskopeReportingforThreatandDataProtection,"Lookup Netskope Application Events","Get a list of application events generated by Netskope. You can filter by timeperiod or advanced query parameters. #ExamplePrompt show me Netskope Application Events between 1727983942 and 1727985942 #ExamplePrompt show me Netskope Application Events between 1727983942 and 1727985942 for user ron@gmail.com #ExamplePrompt show me Netskope Application Events for user ron@gmail.com for last 3 months."
+NetskopeReportingforThreatandDataProtection,"Lookup Netskope Audit Events","Get a list of audit events generated by Netskope. You can filter by timeperiod or advanced query parameters. #ExamplePrompt show me Netskope Audit Events between 1727983942 and 1727985942 #ExamplePrompt show me Netskope Audit Events between 1727983942 and 1727985942 for user ron@gmail.com #ExamplePrompt show me Netskope Audit Events for user ron@gmail.com for last 3 months."
+NetskopeReportingforThreatandDataProtection,"Lookup Netskope Network Events","Get a list of network events generated by Netskope. You can filter by timeperiod or advanced query parameters. #ExamplePrompt show me Netskope Network Events between 1727983942 and 1727985942 #ExamplePrompt show me Netskope Network Events between 1727983942 and 1727985942 for user ron@gmail.com #ExamplePrompt show me Netskope Network Events for user ron@gmail.com for last 3 days.   "
+NetskopeReportingforThreatandDataProtection,"Lookup Netskope Page Events","Get a list of page events generated by Netskope. You can filter by timeperiod or advanced query parameters. #ExamplePrompt show me Netskope Page Events between 1727983942 and 1727985942 #ExamplePrompt show me Netskope Page Events between 1727983942 and 1727985942 for user ron@gmail.com #ExamplePrompt show me Netskope Page Events for user ron@gmail.com for last 3 days.      "
+"HPWXP_US",GetDeviceScoreDetails,"Get details of device score, system health score, OS Performance score, security score of devices enrolled in WXP as well as a summary of the device
+The score categories except gpuScore, batteryScore, fanScore, diskReplacementScore, win11UpgradeCompatibilityScore, cpuUtilizationScore30, memoryUtilizationScore30, diskSpaceScore, osCrashScore, startupTimeScore, shutdownTimeScore, bsodScore, swErrorCollaborationAppScore, dockingStationPnpPowerScore, dockingStationFirmwareScore, outdatedCriticalDriverScore, biosCriticalityScore, bhmSettingScore, lastRestartDateScore: 
+1. Poor score: 0 to 55
+2. Fair Score: 55 to 85
+3. Great Score: 85 to 100
+
+The score categories for gpuScore, batteryScore, fanScore, diskReplacementScore, win11UpgradeCompatibilityScore, cpuUtilizationScore30, memoryUtilizationScore30, diskSpaceScore, osCrashScore, startupTimeScore, shutdownTimeScore, bsodScore, swErrorCollaborationAppScore, dockingStationPnpPowerScore, dockingStationFirmwareScore, outdatedCriticalDriverScore, biosCriticalityScore, bhmSettingScore, lastRestartDateScore: 
+1. Poor score: 0 
+2. Fair Score: 0.5
+3. Great Score: 1.0
+"
+"HPWXP_US",GetDeviceDistributionByScore,"Get the count of devices having a poor, fair, great device score, system health score, OS Performance score, security score
+The score categories: 
+1. Poor score: 0 to 55
+2. Fair Score: 55 to 85
+3. Great Score: 85 to 100
+"
+"HPWXP_US",GetWarranty,"Get details of warranty and care pack status of devices enrolled in WXP.
+"
+"HPWXP_US",GetWin11Compatibility,"Get details of Windows 11 compatibility of devices enrolled in WXP.
+"
+"HPWXP_US",GetBlueScreenDetails,"Get details of BSODs or Blue Screens of devices enrolled in WXP.
+"
+"HPWXP_US",GetBlueScreenCountsDevice,"Get counts of BSODs or Blue Screens of devices based on bugcheck code and drivers enrolled in WXP.
+"
+"HPWXP_US",GetBlueScreenTopErrorsByBugCheck,"Get counts of BSODs or Blue Screens of devices based on bug check code. To aggregate the data across the months, the filter of (dateDimension eq \""Yes\"") should be used
+"
+"HPWXP_US",GetBlueScreenTopErrorsByDriver,"Get counts of BSODs or Blue Screens of devices based on the driver causing the crash. To aggregate the data across the months, the filter of (dateDimension eq \""Yes\"") should be used
+"
+"HPWXP_US",GetApplicationDetails,"Get details of the applications crashing, count of application hangs and freezes, applications having issues
+**Freezes and hangs are the same**        
+"
+"HPWXP_US",GetApplicationDeviceAggregationDetails,"Get the list of devices on which an application has an issue i.e an application is crashing, hanging or freezing
+**Freezes and hangs are the same**        
+"
+"HPWXP_US",GetApplicationDeviceDetails,"Get the list of application crashes, hangs, freezes on a device
+**Freezes and hangs are the same**        
+"
+"censys_platform","Generate a Censys Query","This endpoint allows you to generate a Censys Query from a natural language prompt.
+"
+"censys_platform","Search the Censys Global Index","This endpoint allows you to search the Censys Global Index using the Censys Query Language (CenQL).
+"
+"censys_platform","Aggregate Censys Search Results by Field","This endpoint allows you to aggregate search results based on the given query (known as a report or aggregation)
+"
+"censys_platform","Get a certificate by SHA256 hash in Censys","This endpoint allows you to get a certificate from the Censys certificates index by using the certificate's SHA256 hash as the certificate ID.
+"
+"censys_platform","Get multiple certificates by SHA256 hash","This endpoint allows you to get multiple certificates from the Censys certificates index by using the certificate's SHA256 hash as the certificate ID.
+"
+"censys_platform","Get a host by IP Address","This endpoint allows you to get a host from the Censys hosts index by using the host's IP Address as the host ID.
+"
+"censys_platform","Get multiple hosts by IP Address","This endpoint allows you to get multiple hosts from the Censys hosts index by using the host's IP Address as the host ID.
+"
+"censys_platform","Get a web property by ID","This endpoint allows you to get a web property from the Censys web properties index by using the web property's ID (domain:port).
+If the port is not specified, use port 443.
+"
+"censys_platform","Get multiple web properties by ID","This endpoint allows you to get multiple web properties from the Censys web properties index by using the web property's ID (domain:port).
+If the port is not specified, use port 443.
+"
+Whoisfreaks,"get Live, Historical or reverse whois","Retrieves Live, Historical or Reverse WHOIS information based on the specified parameters."
+Whoisfreaks,getDNSRecords,"Retrieves live and historical records or dns data for a specified domain OR reverse DNS records for the specified data like IPV4 in case of A record and similarly for other supported records too."
+Whoisfreaks,getLiveSSLCertificate,"Retrieves live SSL certificate information for the specified domain."
+Whoisfreaks,getIpWhois,"Retrieves WHOIS information for the specified IP address."
+Whoisfreaks,getAsnWhois,"Retrieves WHOIS information for the specified ASN."
+Whoisfreaks,checkSingleDomainAvailability,"Checks the availability of the specified domain and provides suggestions if requested."
+Splunk,GetSplunkSearchJobResults,"Get Splunk search results for a search job. 
+This either requires a search job be previously kicked off or explicitly specifying the search job ID.
+"
+Splunk,CreateSplunkSearchJob,"Create a Splunk search job.
+"
+Splunk,GetSplunkSavedSearches,"List all Splunk saved searches.
+"
+Splunk,CreateSplunkSavedSearch,"Saves a search query in Splunk.
+"
+Splunk,DispatchSplunkSavedSearch,"Dispatch the specific saved search (create / start a search job using the saved search)
+"
+Splunk,GetSplunkFiredAlerts,"Get fired alerts from recurring saved searches.
+"
+Splunk,GetSplunkFiredAlert,"Access a specific fired alert.
+"
+Sentinel,GetSentinelIncidents,"Get a list of incidents from a Microsoft Sentinel workspace."
+Sentinel,ListSentinelWorkspaces,"Get a list of your Microsoft Sentinel workspaces."
+Cybersixgill,"IQ chat","Get answer from IQ chat for the given query. The query can't contain the term 'cybersixgill', except as a prefix in the following form: 'According to Cybersixgill...'.  #ExamplePrompt According to Cybersixgill, tell me about APT32"
+CheckPhish,"Post_neo_copilot_scan","Scan a specific URL using CheckPhish"
+"ThreatIntelligence.DTI",FindThreatIntelligence,"Look up threat intelligence information like intelligence profiles, articles, and threat analytics."
+"ThreatIntelligence.DTI",GetCookiesByIndicators,"Get the cookies of a list of IP addresses and hostnames"
+"ThreatIntelligence.DTI",GetCveMitigation,"Get the mitigation or remediation steps of a given CVE."
+"ThreatIntelligence.DTI",GetCvesByIdsDti,"Get the details and remediation for a list of CVE IDs."
+"ThreatIntelligence.DTI",GetCvesByKeywordSearchDti,"Get a list of terse info for CVEs/vulnerabilities related to a keyword, or if no keyword is provided, a list of recent CVEs."
+"ThreatIntelligence.DTI",GetDnsRecordsByIndicators,"Get the DNS records of a list of hostnames/domains"
+"ThreatIntelligence.DTI",GetDnsResolutionsByIndicators,"Get the DNS resolutions of a list of IP addresses and hostnames"
+"ThreatIntelligence.DTI",GetHostPairsByIndicators,"Get the host pairs of a list of IP addresses and hostnames"
+"ThreatIntelligence.DTI",GetIndicatorsByIndicators,"Get the indicators of compromise (IOCs) related to another indicator of compromise (IOCs)."
+"ThreatIntelligence.DTI",GetIntelProfileArticleIndicators,"Get the indicators of compromise (IOCs) related to a given intel profile or an article."
+"ThreatIntelligence.DTI",GetIntelProfileIndicators,"Get the indicators of compromise (IOCs) related to a given intelligence profile."
+"ThreatIntelligence.DTI",GetMalwareByKeyword,"Look up malware information by an explicit name or keyword."
+"ThreatIntelligence.DTI",GetRelatedIncidentsByQuery,"Returns the related incidents/alerts in a given time period for matching Threat Analytics reports based on a search query."
+"ThreatIntelligence.DTI",GetReputationsForIndicators,"Get the reputation details for a list of indicators of compromise."
+"ThreatIntelligence.DTI",GetReverseDnsRecordsByIndicators,"Get the reverse DNS records of a list of IP addresses and hostnames"
+"ThreatIntelligence.DTI",GetServicesForIndicators,"Get the services on a list of IP addresses"
+"ThreatIntelligence.DTI",GetSslCertsByIndicators,"Get the SSL certificates of a list of IP addresses and hostnames"
+"ThreatIntelligence.DTI",GetSubdomainsByIndicators,"Get the subdomains for a list of hostnames"
+"ThreatIntelligence.DTI",GetSummaryForIndicators,"Get the summary of an indicator of compromise"
+"ThreatIntelligence.DTI",GetTrackersByIndicators,"Get the trackers of a list of IP addresses and hostnames"
+"ThreatIntelligence.DTI",GetWebComponentsByIndicators,"Get the web components of a list of IP addresses and hostnames"
+"ThreatIntelligence.DTI",GetWhoisRecordsForIndicators,"Get the latest WHOIS record for a list of IP addresses and hostnames."
+"NL2API.Assistant",AskNL2API,"Query data on users, groups, license usage, conditional access, sign-in logs, audit logs and more"
+AzureWorkbooks,CreateAzureWorkbook,"Create a complete Azure Workbook JSON based on user natural language description"
+AzureWorkbooks,UpdateAzureWorkbook,"Updating an existing  Azure Workbook JSON based on user natural language user prompt"
+IPGeolocation,getIPGeolocation,"Get detailed geolocation information, including security, time zone, currency, and hostname data based on an IP address."
+vederelabs,"Get IoCs","Endpoint that returns Indicator of Compromise as STIX bundle. It may contain IPv4 addresses, file hashes, URLs and Domain names.
+The parameters in this path are optional, however when ""Start"" is specified, it should be in the format of ""now-x"", so for the last 2 hours it would be ""now-2h"".
+The IndicatorType parameter is used to retrieve only a specific type of indicator like ipv4-addr, url, domain-name, file. If not specified it gets all of them. 
+The value parameter can also be optionally specified, and this can contain a single IP, URL, Domain Name or File hash, to filter for results only related to that value.
+When returning information that has any external reference, that link must be provided.
+Any information that is relevant to further searches, such as an id, must be provided in responses.
+The response of this endpoint may be quite big. Hence, when looking for generic IoCs, which means the value parameter is not set, just return maximum 3 indicators and fix the Start parameter to ""now-8h"".
+"
+vederelabs,"Get KEVs","Endpoint that returns Known Exploited Vulnerabilities (KEV) as STIX bundle.
+The parameters in this path are optional, however when ""Start"" is specified, it should be in the format of ""now-x"", so for last 2 days it would be ""now-2d"". 
+The ""Is Cisa Kev"" parameter is a boolean which allows restricting results to KEVs reported by CISA.
+The CVEConfidence parameter is used to filter according to minimum confidence and can have the following values: low, medium, high.
+"
+vederelabs,"Original CVEs","Endpoint that returns Vedere Labs reported CVEs as STIX objects (values), grouped by project name (keys).
+This is a list of vulnerabilities discovered by Vedere Labs, including any related to Operational Technology (OT) and IoT. 
+The parameters in this path are optional, however when ""Start"" is specified, it should be in the format of ""now-x"", so for last 2 days it would be ""now-2d"", for last 2 months it would be ""now-2m"".
+"
+vederelabs,"DNS lookup","The lookup endpoint will check if a DNS is using Domain Generation Algorithm (DGA) or data exfiltration techniques which are typically used in malware or for malicious purposes.
+The dns parameter in this path is required and should be set as the domain name, dns name, or url that is to be queried.
+"
+Intune,IntuneVulnerabilityRemediationAgent,"An agent which identifies vulnerable devices exposed by CVEs and deploy expeditable quality to those."
+Intune,DescribeIntunePolicy,"Summarize and assess the impact of a Microsoft Intune policy."
+Intune,ErrorCodeAnalyzer,"Get detailed information about a device configuration error code."
+Intune,GetAppAndPolicyGroupTargeting,"Get a summary of the number of users and devices that an app or policy is assigned to."
+Intune,GetAppOrPolicyDeviceGroupTargeting,"Get info about why a managed device has a policy or app by checking its group memberships."
+Intune,GetIntuneDeviceDiff,"Get a summary of similarities and differences in the configuration of two managed devices."
+Intune,GetIntuneDeviceDiscoveredOrManagedApplication,"Get a list of Intune managed apps, or softwares, appliations installed on a managed device, or get info about an app."
+Intune,GetIntuneDeviceGroupMemberships,"Summarize the group memberships of a managed device."
+Intune,GetIntuneDevices,"Get a summary of Intune managed devices."
+Intune,GetPoliciesPerDevice,"Get info on policies assigned to a managed device, including device config, app config, and compliance."
+Intune,GetPolicySetting,"Get detailed info about a device configuration policy setting, including best practices."
+Intune,GetPolicySettingUsage,"Get info about whether any existing device configuration policies contain a specified setting."
+Generic,ConvertUnixTimestamp,"Convert a Unix timestamp to a human readable date and time."
+Generic,ScriptAnalyzer,"Analyze and interpret a command or script to natural language."
+Generic,GenerateSecurityExamples,"Generate security-specific examples, such as event logs, reports, and configuration instructions."
+Generic,ExtractIndicatorsOfCompromise,"Extract indicators of compromise from plain text."
+Generic,AnalyzeSecurityData,"Analyze, summarize, and explain security data such as event logs, and answer security questions."
+Generic,SummarizeData,"Get a summary of the given data."
+Generic,EntityExtraction,"Extract entities (e.g. accounts, URLs, hashes) from security data (e.g. logs, alerts and incidents)"
+AviatrixPlugin,getGroups,"Fetches a list of Aviatrix Distributed Cloud firewall groups. You can optionally filter groups by their type.  Groups are used to define the source and destination of traffic that will be evaluated by firewall policies.
+"
+AviatrixPlugin,getPolicies,"Retrieve a list of firewall policies. A policy is a set of firewall rules that control traffic between source and destination SmartGroups, and optionally through a WebGroup. Policies define actions such as permit or deny, logging, priorities, and other enforcement attributes.
+"
+AviatrixPlugin,getLogs,"Fetch logs filtered by various criteria such as policy UUID, IP addresses, 
+action taken, and time range.
+"
+AviatrixPlugin,getLogsCount,"Fetch the total number of logs filtered by various criteria such as 
+policy UUID, IP addresses, action taken, and time range.
+"
+AviatrixPlugin,listRecommendedActions,"Retrieves a list of all possible recommended actions along with their IDs and required query parameters for generating recommendations.
+The available actions may be dynamically updated.
+"
+AviatrixPlugin,getRecommendedAction,"Retrieves a specific recommended action customized based on the provided query parameters.
+The required query parameters are defined by the action itself.
+"
+IPinfo,getCurrentInformation,"Returns IP information about the current IP.
+"
+IPinfo,getInformationByIp,"The ipinfo.io/{ip} endpoint provides comprehensive information about a specified IP address, including geographic location (city, region, country), coordinates, postal code, and timezone.
+Based on the pricing tier, it also provides ASN (Autonomous System Number) details, associated company information, privacy settings (e.g., VPN, proxy usage), abuse contact information, and hosted domains associated with the IP.
+This endpoint is useful for applications needing detailed IP intelligence, such as identifying geographic origin, privacy status, and potential abuse reporting information.
+"
+IPinfo,getMe,"The `/me` API endpoint can be used to provide summary information on the access token limits, access to API products, and other related information.
+The `/me` endpoint can be used in verifying access tokens as well.
+"
+IPinfo,getAsn,"Returns information about an ASN, such as the assigned prefixes, related domain, and more.
+The ASN API provides comprehensive information about an Autonomous System (AS) entity.
+It delivers data on the AS's registration, ASN type, network details, associated prefixes (including IPv6), and relationships with other ASNs (peers, upstreams and downstreams).
+"
+IPinfo,getCompany,"Returns information of the organization that is operating an IP address such as name, organization type and their official domain.
+"
+IPinfo,getRanges,"The IP address ranges API endpoint provides information about IP address ranges assigned to or operated by a specific organization, identified by its domain name. This includes the number of IP ranges, specific IP range blocks (both IPv4 and IPv6), and any domain redirection information.
+"
+IPinfo,getDomains,"The Hosted Domains or Reverse IP API endpoint returns a list of domains hosted on a specified IP address, including the total number of domains and the specific names associated with that address.
+"
+IPinfo,getAbuse,"The IP to abuse contact information API endpoint provides detailed information about the abuse contact associated with a specific IP address.
+The response includes the abuse contact's name, email address, postal address, city, state, country, phone number, and the network associated with the IP. 
+"
+IPinfo,getPrivacyInformationByIp,"The IP to Privacy Detection or Anonymous IP API provides privacy-related information about a specified IP address.
+This includes whether the IP is associated with a VPN, proxy, Tor network, relay service, or a hosting service/data center (indicative of bots).
+The response details the privacy status of the IP, indicating any anonymizing services in use and specifies the type of service (e.g., NordVPN, TunnelBear, Mullvad, ProtonVPN, CyberGhost, ExpressVPN, Surfshark etc.).
+"
+IPinfo,"Get_whois_net_{whoisnetid}","This API endpoint allows users to retrieve WHOIS information based on a specified Net ID.
+The response includes details such as the IP address range, organization name, country, and various administrative information related to the network.
+"
+IPinfo,"Get_whois_net_{whoisip}","The WHOIS API lookup via IP address provides WHOIS information based on a specific IP address or IP address range.
+The response contains detailed information about the organization associated with the IP, including the range of addresses, organization name, administrative contacts, abuse contacts, and additional metadata such as the country and contact details for both technical and administrative support.
+"
+IPinfo,"Get_whois_net_{domain}","The IPinfo WHOIS API lookup via organization organization domain name provides comprehensive WHOIS information for specified organization, enabling users to gain insights into the registration and organizational details of internet entities. The response includes a total count of records, and detailed records for each associated IP range.  Querying the organization domain reveals critical information such as the organization's name, country, and contact details for technical and administrative personnel, including names, emails, and physical addresses. Additionally, the response features abuse contact information and registration dates, which are essential for addressing network issues and potential abuse.
+"
+IPinfo,"Get_whois_net_AS{asn}","The IPinfo WHOIS API lookup via ASN provides in-depth WHOIS information associated with a specific Autonomous System Number (ASN). Querying ASN reveals critical data, including the organization's name, the allocated IP range, and the country of operation. The response includes administrative and technical contact information, highlighting the contact person along with their address and phone number. Additionally, the API provides details for abuse reporting, including a dedicated email for abuse contacts. This comprehensive dataset is essential for network administrators, security professionals, and organizations needing to investigate ASN ownership and maintain network integrity.
+"
+IPinfo,"Get_whois_org_{whoisorgid}","The IPinfo WHOIS API lookup via organization IDs (Org) provides comprehensive information about a specific internet organization identified by its WHOIS organization ID. Querying a WHOIS org key returns data about the internet organization. The response includes critical details such as the organization's address, along with the contact information for various roles within the organization. This includes administrative, technical, and abuse contacts. The API also offers timestamps for when the organization was created and last updated, which is essential for maintaining accurate records.
+"
+IPinfo,"Get_whois_poc_{whoispoc}","The IPinfo WHOIS API lookup via Points of Contact (POC) provides essential details about an individual associated with an internet organization identified by their WHOIS POC ID. For instance, querying the POC ID yields information about the name of the point of contact and their organization location. The response includes the organization's physical address, email address, and contact numbers. Additional metadata indicates when the record was created and last updated, alongside the source of the information.
+"
+IPinfo,getCurrentIp,"Returns the current public/external IP address.
+"
+IPinfo,getIpByIp,"Returns a ip for the selected IP.
+"
+IPinfo,getCurrentHostname,"Returns the current hostname.
+"
+IPinfo,getHostnameByIp,"Returns a hostname for the selected IP.
+"
+IPinfo,getCurrentCity,"Returns the current city.
+"
+IPinfo,getCityByIp,"Returns a city for the selected IP.
+"
+IPinfo,getCurrentRegion,"Returns the current region. If the region is not available, it will return an empty string.
+"
+IPinfo,getRegionByIp,"Returns a region for the selected IP. If the region is not available, it will return an empty string.
+"
+IPinfo,getCurrentCountry,"Returns a concise response consisting of a two-letter country code. If the country is not available, it will return an empty string.
+"
+IPinfo,getCountryByIp,"Returns a country for the selected IP in two letter ISO-3166 format. If the country is not available, it will return an empty string.
+"
+IPinfo,getCurrentLocation,"The '/loc' API endpoint provides the geographical location of a user's IP address in a response with latitude and longitude in comma-separated text format.
+"
+IPinfo,getLocationByIp,"The '/loc' API endpoint provides the geographic location of an IP address as latitude and longitude separated by a comma in text form.
+"
+IPinfo,getCurrentPostal,"The `/postal` API endpoint provides a straightforward method for retrieving the current postal code or zip code. When this endpoint is queried, the API responds with a simple string indicating the postal code for the current IP address.
+"
+IPinfo,getPostalByIp,"The `/postal` API lets users input an IP address to get back the corresponding postal or zip code in a simple string format.
+"
+IPinfo,getCurrentTimezone,"The '/timezone' API endpoint returns the user's timezone based on their IP address in IANA format.
+"
+IPinfo,getTimezoneByIp,"The `/timezone` API endpoint returns the IANA timezone based on the user's input IP address.
+"
+IPinfo,getCurrentOrganization,"The '/org' API endpoint identifies the Autonomous System Number (ASN) and ASN organization associated with the user's IP address. When called, the API returns a string with the ASN (prefixed by 'AS') and organization name.
+"
+IPinfo,getOrganizationByIp,"The '/org' API endpoint provides the ASN and organization related to the user's input IP address. It returns a string including the ASN (prefixed by 'AS') and AS organization name.
+"
+Investigation,VisualizeInvestigationAsGraph,"Generates a graph for the last incident/issue being investigation upon as a GraphViz dot file. This skill is **not** to be intended for functionalities requiring non-graphical representations."
+FileUploads,AskUploadedFiles,"Answers questions using user's uploaded files"
+EASM,EASMCurateAssets,"Curate EASM assets by adding or removing a label and/or setting the state of an asset."
+EASM,EasmGetWorkspaceLabels,"Queries labels and provides a link to manage labels."
+EASM,GetArbitraryEasmQuery,"Get assets based on a natural language query."
+EASM,GetAssetsAffectedByCVE,"Identify the assets a CVE impacts, their details, and when they were observed."
+EASM,GetAssetsAffectedByCVSS,"Identify the assets a CVSS score impacts, their details, and when they were observed."
+EASM,GetAttackSurfaceInsights,"Learn about high, medium, or low priority insights impacting attack surfaces."
+EASM,GetAttackSurfaceSummary,"Discover what assets are in an attack surface."
+EASM,GetEasmGeneralInfo,"Learn about Microsoft Defender EASM features, data, and other details."
+EASM,GetExpiredCertificates,"Learn about expired SSL certificates, their details, and associated assets for attack surfaces."
+EASM,GetExpiredDomains,"Learn about expired domains, their details, and assets for attack surfaces."
+EASM,GetSHA1Certificates,"Learn about SSL certificates using SHA-1, their details, and associated assets."
+AzureFirewall,CrossReferenceIdpsSignature,"Look for a given IDPS signature across your tenant, subscription, or resource group."
+AzureFirewall,GetAuxiliaryIdpsData,"Expand on the description of an IDPS signature in the Azure Firewall logs."
+AzureFirewall,GetIdpsSignaturesForFirewall,"Retrieve the top IDPS signature hits for an Azure Firewall."
+AzureFirewall,GiveTargetedIdpsGuidance,"Generate recommendations to secure your environment using Azure Firewall's IDPS feature."
+Fusion,AssessVulnerabilityImpact,"Gets a list of assets that have been impacted by a specific vulnerability / CVE"
+Fusion,EnrichIncidentWithDeviceContext,"Retrieve detailed device information from Intune and Microsoft Defender for Endpoint. Device information may include device user, manufacturer and model, operating system information, compliance status, and usage-related timestamps."
+Fusion,EnrichIncidentWithFileContext,"Enrich incident investigation with file context from Microsoft Defender for Endpoint.  Enriched data may include file hashes, device information, account information, file locations and associated timestamps."
+Fusion,FindUserIpOrHostnameAccessRecords,"Gets a list of users who have accessed specific hostnames and/or IP addresses"
+Fusion,FindUserScriptDownloads,"Gets a list of users who have downloaded a specific script"
+Fusion,GetIncident,"Gets a summary of an incident given its GUID, number or URL."
+Fusion,GetIncidentEntities,"Gets entities of an incident given its GUID, ID number or URL."
+Shodan,"Check Shodan Host IP","Returns all services that have been found on the given host IP.
+What does Shodan say about IP address 8.8.8.8?"
+Shodan,"Get Shodan Host Count","This method behaves identical to ""/shodan/host/search"" with the only difference that this method does not return any host results, it only returns the total number of results that matched the query and any facet information that was requested. As a result this method does not consume query credits."
+Shodan,"Get Shodan Host Search","Search Shodan using the same query syntax as the website and use facets to get summary information for different properties.
+
+## **Requirements**
+
+This method may use API query credits depending on usage. If any of the following criteria are met, your account will be deducted 1 query credit:
+
+1. The search query contains a filter.
+2. Accessing results past the 1st page using the ""page"". For every 100 results past the 1st page 1 query credit is deducted."
+Shodan,"Get Shodan Host Search Facets","This method returns a list of facets that can be used to get a breakdown of the top values for a property."
+Shodan,"Get Shodan Host Search Filters","This method returns a list of search filters that can be used in the search query."
+Shodan,"Get Shodan Host Search Tokens","This method lets you determine which filters are being used by the query string and what parameters were provided to the filters."
+Shodan,"Get Shodan Ports","This method returns a list of port numbers that the crawlers are looking for."
+Shodan,"Get Shodan Protocols","This method returns an object containing all the protocols that can be used when launching an Internet scan."
+Shodan,"Get Shodan Scans","Returns a listing of all the on-demand scans that are currently active on the account."
+Shodan,"Get Shodan Scan ID","Check the progress of a previously submitted scan request. Possible values for the status are:
+
+- SUBMITTING
+- QUEUE
+- PROCESSING
+- DONE"
+Shodan,"Get Shodan Alert ID Info","Returns the information about a specific network alert."
+Shodan,"Get Shodan Alerts Info","Returns a listing of all the network alerts that are currently active on the account."
+Shodan,"Get Shodan Alert Triggers","Returns a list of all the triggers that can be enabled on network alerts."
+Shodan,"Get Shodan Notifers","Returns a list of all the notifiers that the user has created."
+Shodan,"Get Shodan Notifer Provider","Returns a list of all the notification providers that are available and the parameters to submit when creating them."
+Shodan,"Get Shodan Bulk Data","Returns a list of datasets that can be downloaded in Shodan."
+Shodan,"Get Shodan Bulk Data Dataset","Returns a list of files that users can download from the dataset."
+Shodan,"Get Shodan Domain","Get all the subdomains and other DNS entries for the given domain."
+Shodan,"Get Shodan Domain Resolve","Look up the IP address for the provided list of hostnames."
+Shodan,"Get Shodan Domain Reverse","Look up the hostnames that have been defined for the given list of IP addresses."
+Shodan,"Get Shodan HTTP Headers","Shows the HTTP headers that your client sends when connecting to a webserver."
+Shodan,"Get Shodan My IP","Get your current IP address as seen from the Internet."
+Tanium,"List Child Processes for Process File",
+Tanium,"Count Endpoints Having Package Version",
+Tanium,"Get Vulnerability Test Results",
+Tanium,"List Endpoints Having Package",
+Tanium,"List Endpoints with Process Command",
+Tanium,"List Endpoints with Process Name",
+Tanium,"List Endpoints with Process MD5 Hash",
+Tanium,"List Endpoints Vulnerable To CVE",
+Tanium,"List Process SHA-256 Hashes and Versions",
+Tanium,"List Processes Connected To IPv4 Address",
+Tanium,"List Processes Ran As User",
+Tanium,"Get Real-time Data from Endpoints",
+Tanium,"List File Operations",
+Tanium,"List Service Module Details",
+Tanium,"List Service Process Details",
+Tanium,"Get Logged In User",
+Tanium,"List WMI Event Consumers",
+Tanium,"View Endpoint Processes",
+Tanium,"List File Details",
+TufinMate,topologyPath,"Retrieve information of network access status.
+"
+TufinMate,UnusedRulesDeviceInformation,"Retrieve information about device using the device id.
+"
+TufinMate,ActiveWorkflowList,"Retrieve information of all active workflows.
+"
+TufinMate,AccessRequestWorkflows,"Retrieve a list of all the active Access-Request workflow.
+"
+TufinMate,RuleDecommissionWorkflows,"Retrieve a list of all the active Decommission workflow.
+"
+TufinMate,UnusedRules,"Retrieve information of unused rules for all devices.
+"
+TufinMate,UnusedRulesPerDevice,"Retrieve information of unused rules for a device id.
+"
+TufinMate,ShadowedRules,"Retrieve information of unused rules for a device id.
+"
+TufinMate,ShadowedRulesForDeviceId,"Retrieve information of shadowed rules for a device id.
+"
+TufinMate,PermissivenessLevelHigh,"Retrieve information of highly permissive rules.
+"
+TufinMate,PermissivenessLevelHighForDeviceId,"Retrieve information of highly permissive rules for device id.
+"
+TufinMate,PermissivenessLevelMedium,"Retrieve information of medium permissive rules.
+"
+TufinMate,PermissivenessLevelMediumForDeviceId,"Retrieve information of medium permissive rules for device id.
+"
+TufinMate,PermissivenessLevelLow,"Retrieve information of low permissive rules.
+"
+TufinMate,PermissivenessLevelLowForDeviceId,"Retrieve information of low permissive rules for device id.
+"
+TufinMate,Violations,"Retrieve information of violating rules.
+"
+TufinMate,ViolationsForDeviceId,"Retrieve information of violating rules on a specific device.
+"
+"Pure_Signal_Scout",ScoutFoundationAPI,"Provide insights about IP Addresses which tell about IPs are suspicious, malicious or informational.
+The foundation API gets critical information about single and multiple IPs. The
+foundation API contains the data which includes autonomous system Information (AS Info), tags, Insights
+etc. Based on various IPs the data list includes the critical information regarding each IP. 
+Based on Insights, users can find the IP rating such as suspicious etc. Insights appear on an IP address's summary view and offer useful information at a glance such as:
+
+1. Combinations of malicious tags
+2. Suspicious activities
+3. Peculiar domains
+4. Recently expired domain records
+
+Insights are sorted by rank of descending maliciousness (malicious, suspicious, followed by informational). 
+The overall rating of the IP is determined by the most malicious insight. A maximum of ten insights are shown per IP Address searched.
+
+"
+"Pure_Signal_Scout",ScoutIPDetailsAPI,"Provide IP information such as identity, communication (comms), passive DNS, open ports, x.509 certificate, fingerprints, WHOIS and summary
+
+The  IP detail endpoint allows users to retrieve a comprehensive report about a specific IP address. The report includes detailed information about the IP address's communication history, including open ports, protocols, and associated domains. 
+Users can get the IP address's X.509 certificates, fingerprints, and associated whois data. 
+By specifying the start and end dates for the response, users can gain insights into the IP address's relationships with specific times. 
+Additionally, users can specify the number of days for which the report should be generated, allowing them to analyze the IP address's history in more detail.
+Scout is a threat investigation and hunting platform used to identify and track malicious infrastructure on the internet. By using the IP detail endpoint the user can find the following things about the IP address.
+
+The details page separates information about a searched IP Address into various sections.
+Summary: The summary section shows summary information for the queried IP Address.
+Communication (Comms): The communications section contains aggregated network traffic information for the queried IP Address.
+Open Ports: The open ports section contains open port banner information obtained from devices connected to the Internet. This data is continuously updated as multiple servers scan IP address ranges for open ports and attempt to retrieve information on the service it is advertising. The banner field can contain items like the returned web server header, SSH banner or X.509 PEM certificate and the service field may contain the identified service tied to the banner (ssh, HTTP).
+PDNS: The Passive Domain Name System (PDNS) section contains Passive DNS resource records returned by public DNS servers. The Passive Domain Name System (PDNS) dataset contains many different record types. It can be used to establish which A records have been observed for a domain of interest, which name servers have been tied to a certain domain and which MX (mail server) or SOA records are known. These records are collected by passive monitoring of DNS query responses.
+X.509: The X.509 section contains information on public key infrastructure (PKI) digital certificates collected through active probing of devices running SSL on public IP addresses.
+Fingerprints: The fingerprints section tab contains the three possible fingerprint hash values are JA3, JA3S, and JARM. The JA3 fingerprint dataset contains passive a TLS (and predecessor SSL) fingerprint for the client (JA3) and a fingerprint for the server (JA3S). This dataset can be used to identify the likely application used by the client and server, as well as identify IP addresses of command and control servers that use a distinctive JA3 fingerprint. The JARM fingerprint dataset contains active/scanning of candidate IP addresses and the resultant TLS session negotiation between the client and server. When the scan initiates 10 TLS Client Hello packets a candidate IP address and captures specific attributes of the TLS Server Hello responses a TLS session. During the handshake, the client shares the TLS libraries/methods it supports. The server shares which libraries/methods it supports. The TLS negotiations are exchanged in clear text, allowing the supported libraries to identify likely applications used by the client and server. The distinct IPs column indicates we have observed the fingerprint hash on the following number of IPs during the search period.
+Whois: The whois section shows Whois information for the IP Address.
+
+"
+"Pure_Signal_Scout",ScoutSearchAPI,"Provide Domain and Scout search query information including country codes, autonomous system information, tags, whois data, open ports, PDNS, communication, service detail, fingerprints, X.509 certificate.
+
+The Scout search endpoint a list of search results using the Scout query language. When a query is provided, this
+endpoint will search based on the query. This endpoint leverages the Scout query language to return a list of
+search results, which contains the list of IPs. Provide a query to initiate a search. Results can be filtered by
+the 'query', 'start_date', and 'end_date' parameters. Optionally, use the 'days' parameter to specify a relative
+date range. The 'size' parameter allows control over the number of records returned.
+
+The query can accept the following formats, such as IP address, domain name, website, or an advanced query using selectors.
+
+```
+104.18.213.12
+93[.]184[.]216[.]34
+jquery.com
+example[.]com
+```
+
+"
+ServiceNow,AnalyzeServiceNowIncidents,"Analyze or summarize one or many ServiceNow incidents based on an optional incident number, optional keyword, incident state, incident priority, date range, and the user's query or desired analysis."
+ServiceNow,AppendCommentToServiceNowIncident,"Appends / adds comment to a specific ServiceNow Incident"
+ServiceNow,GetServiceNowIncident,"Get detailed information about a ServiceNow Incident such as short description, priority, category, state, configuration item, business service, comments, and worknotes. **Must be used when user asks for both comments AND worknotes for an incident.**"
+ServiceNow,GetServiceNowIncidentComments,"Gets detailed comments for a ServiceNow incident"
+ServiceNow,GetServiceNowIncidentWorkNotes,"Gets detailed work notes for a ServiceNow incident"
+ServiceNow,SearchServiceNowIncidents,"Searches for ServiceNow incidents based on optional keyword, incident state, and incident priority inputs"
+Darktrace,GetModelbreaches,"Returns information about Darktrace ""modelbreaches"" sometimes referred to as ""model breaches"", models or alerts.
+A modelbreach will occur when something unusual has occurred, it will have a score and also a category which are used in combination to represent how important the alert is to triage.
+
+
+
+
+
+https://[instance]/modelbreaches?pbid=123&historicmodelonly=true
+
+
+https://[instance]/modelbreaches?from=2020-02-03T00:00:00&to=2020-02-9T23:59:59&minimal=true&includeacknowledged=true
+
+
+https://[instance]/modelbreaches?did=1&starttime=1577836800000&minscore=0.6
+
+It's very important to use parameters minimal=true unless lots of detail is required and fulldevicedetails=true if you're particularly interested in the involved devices."
+Darktrace,"GetModelbreachCommentsBy{pbid}","Returns comments made on specific Darktrace ""modelbreaches"" sometimes referred to as ""model breaches"", models or alerts.
+A modelbreach indicates something unusual has occurred, it will have a score and also a category which are used in combination to represent how important the alert is to triage. Darktrace users add comments to give more context or information.
+
+The `pbid` must be specified as part of the extension in the format: `/modelbreaches/[pbid]/comments`.
+
+
+"
+Darktrace,GetDevices,"The devices endpoint is most useful when you know the darktrace device identifier or ""did"".
+It retrieves information known about that device.
+
+The devices endpoint did parameter can be provided as a comma separated list of each did e.g. /devices?did={device id 1},{device id 2}. When using this comma separated did parameter the return value will be a response of an array with each devices information.
+
+Examples:
+
+
+GET https://[instance]/devices?did=1234&includetags=true #note that used include tags as we want as much device info as possible
+
+
+https://[instance]/devices?did=9
+
+
+https://[instance]/devices?seensince=3600
+
+"
+Darktrace,SearchDevices,"The devicesearch endpoint is most useful when you want to search for multiple devices and do not know the darktrace device identifier ""did"".
+Multiple queries can be space-separated, for example `query=tag:""*T*"" label:""Test""` or `query=type:""laptop"" type:""desktop""`. Repeated field filters are treated as ""or"".
+The default time frame is four weeks (28 days). This can be altered with the `seensince` parameter.
+
+Examples:
+
+
+https://[instance]/devicesearch?query=""sarah""&orderBy=lastSeen&order=asc #note the orderBy and order parameters will make this result more useful as it'll show recently active ones first.
+
+
+https://[instance]/devicesearch?count=10&query=tag:""Antigena*""%20ip:""10.0.1.*""
+
+
+https://[instance]/devicesearch?count=100&query=ip:""8.8.8.8""
+
+Try to ensure you use the count parameter whenever a large list of devices is likely else too much information will be returned"
+Darktrace,GetIncidentGroups,"An AI Analyst group serves as a container for an incident. Use this endpoint to obtain top-level information about detected incidents and filter them based on the available parameters. Groups have an identifier called ""groupid"" that starts with the 'g' character (e.g., g04a3f36e-4u8w-v9dh-x6lb-894778cf9633) and is 37 characters long. Groups consist of events, each with a unique ""uuid"" identifier, one of which will always be the ""groupid"" without the 'g' at the beginning (e.g., 04a3f36e-4u8w-v9dh-x6lb-894778cf9633).
+
+AI Analyst incidents are an excellent starting point for threat hunting or identifying active threats, as their purpose is to autonomously investigate lower-level alerts, anomalies, and unusual behavior.
+
+**Note:** The timestamps and groupid provided in the examples are for illustration purposes only. Replace them with the appropriate timestamps and groupid based on your specific requirements. Make sure Unix timestamps for `starttime` and `endtime` correct for the time period you desire, as this is a common area to make a mistake. In the example URLs, replace `[instance]` with your actual instance information.
+
+Use Cases:
+
+
+
+
+
+
+
+### Examples:
+
+1. GET all AI Analyst incidents in the last 24 hours (replace the example timestamps with your desired time range):
+
+```
+https://[instance]/aianalyst/groups?starttime=1646092800000&endtime=1646179200000&includegroupurl=true
+```
+
+2. GET all critical AI Analyst incidents for the 7-day period from 1st to 7th March 2022 (replace the example timestamps with your desired time range):
+
+```
+https://[instance]/aianalyst/groups?starttime=1646092800000&endtime=1646611200000&includeallpinned=false&critical=true&includegroupurl=true
+```
+
+3. GET details of an AI Analyst incident with groupid=g04a3f36e-4u8w-v9dh-x6lb-894778cf9633 in French (replace the example groupid with your desired groupid and locale with your preferred language):
+
+```
+https://[instance]/aianalyst/groups?groupid=g04a3f36e-4u8w-v9dh-x6lb-894778cf9633&locale=fr_FR&includegroupurl=true
+```
+
+4. GET details of suspicious SaaS incidents with a minimum score of 70 in the last 7 days (replace the example parameters with your desired values):
+
+```
+https://[instance]/aianalyst/groups?suspicious=true&saasonly=true&minscore=70&includegroupurl=true
+```"
+Darktrace,GetDetails,"The details endpoints is useful whenever you need information about specific connections or events including:
+    Get information for connections to an external hostname,
+    network connections, tcp, udp, blocked by respond ( antigena ), between devices
+    notices, events associated to the device (for saas iaas paas etc all low level information is notices as there are no connections)
+To review all connections Darktrace RESPOND/Network ( antigena ) attempted to action use blockedconnections=all. Use blockedconnections=failed for failed attempts. blockedconnections=true for ones that have not failed.
+
+
+
+
+
+
+
+
+
+pbid is used to get any information related to a specific modelbreach connections or notices that triggered / caused it.
+If not using a pbid, always use either count OR a short time range. Otherwise too much information will be returned.
+
+GET the most recent 100 unusual connections for device with did=1
+
+https://[instance]/details?did=1&count=100&eventtype=unusualconnection
+
+Fetch all connections from December 1st 2020 (12:00:00) to December 2nd 2020 (00:00:00) for device with did=1:
+
+https://[instance]/details?did=1&from=2020-12-01T12:00:00&to=2020-12-02
+
+What are the most recent 20 events from a device with did=1 to a device with did=2:
+
+https://[instance]/details?did=1&ddid=2&count=20
+
+What caused the modelbreach model breach with pbid=1234:
+
+https://[instance]/details?pbid=1234
+
+GET the most recent 20 dns (which is port 53) connections for a device with did=3:
+
+https://[instance]/details?destinationport=53&did=3&count=20"
+Darktrace,GetEndpointDetails,"Use this endpoint to gather detailed information about external domains, hostnames, or endpoints that Darktrace has encountered. This is primarily used to investigate external systems, such as unusual IPs or websites. For information about internal hosts within your network, use the `/devices` endpoint instead.
+
+`/endpointdetails` returns location, IP address, and (optionally) device connection information for external IPs, hostnames, and domain names. It helps you gather intel about external endpoints and the devices that have interacted with them.
+
+Use Cases:
+
+
+
+
+
+
+### Notes
+
++ The ""popularity"" score = 100 – (IP or domain) rarity score.
+
++ For hostname queries, `additionalinfo=true` will add an `ips` object and a `locations` object with details of the IP addresses Darktrace has seen associated with the hostname and the physical locations of those IPs where derivable.
+
++ Queries for IPs that are internal (or treated as such) will return `""name"": ""internal_ip"",` in the response and different key/value fields.
+
+### Example Request
+
+`[instance]` in the following examples may be replaced with the instance IP or FQDN - for example, `https://10.0.0.1` or `https://euw1-1234-01.cloud.darktrace.com`
+
+
+1. `GET` details for 8.8.8.8:
+
+    ```
+    https://[instance]/endpointdetails?ip=8.8.8.8
+    ```
+
+2. `GET` details for darktrace.com, including a list of devices that have connected to it:
+
+    ```
+    https://[instance]/endpointdetails?hostname=darktrace.com&devices=true
+    ```"
+Darktrace,Summarystatistics,"`/summarystatistics` returns simple statistics on device counts, processed bandwidth and the number of active Darktrace RESPOND actions.
+
+
+
+
+
+
+### MITRE ATT&CK Framework
+
+The homepage summary visualizes how vast quantities of raw events have been distilled by Darktrace analysis, and how these events are relevant to _tactics_ under the MITRE ATT&CK framework.
+
+For model breaches and raw events, this data is retrieved from the `/summarystatistics` endpoint with the `mitreTactics` parameter.
+
+For AI Analyst, this data is returned in the `groupStats.mitreTactics` object returned from the `/aianalyst/stats` endpoint."
+Darktrace,GetWhatIf,"The terms E2E, PEM, and Proactive Exposure Management can be used interchangeably here.
+The PEM info endpoint is only useful when you know the darktrace device identifier or ""did"".
+It retrieves some general information known about the device and E2E data such as device metrics, CVEs, and campaigns.
+The `airt/v1.0/copilot/metrics` endpoint returns a list of devices identified by Darktrace E2E or details of a specific device. The details include gerneral device information found in `/devices` and E2E metrics, CVEs and campaign details targeting the device.
+"
+Darktrace,EmailActionSummary,"For the Darktrace Email platform returns a summary of actions taken, broken down by action category.
+
+"
+Darktrace,EmailDashStats,"For the Darktrace Email platform returns time-series dashboard statistics for a given filter selection. Filter selection is limited to Direction (inbound or outbound) and short Tag IDs.
+
+
+
+"
+Darktrace,EmailDataLoss,"For the Darktrace Email platform returns Data Loss statistics for users ordered by total DLP breaches.
+
+"
+Darktrace,EmailUserAnomaly,"For the Darktrace Email platform returns User Anomaly statistics for users ordered by most anomalous.
+"
+Darktrace,"GetEmailBy{uuid}","
+
+For the Darktrace Email platform return the summary of the specified email.
+
+Short hand tags are difficult to understand, you can use the following friendly name mapping to improve readability:
+
+    - out of character (value: ""ah"")
+    - credential harvesting (value: ""ch"")
+    - extortion (value: ""ex"")
+    - phishing attachment (value: ""pa"")
+    - spam (value: ""sp"")
+    - phishing link (value: ""pl"")
+    - solicitation (value: ""so"")
+    - spoofing indicators (value: ""ss"")
+    - vip impersonation (value: ""vi"")
+    - malware or ransomware (value: ""mr"")"
+Darktrace,"DownloadEmailBy{uuid}","For the Darktrace Email platform return the raw body of this email.
+"
+Darktrace,SearchEmails,"If you are searching for filters that 'contain' some substring then use the ~* operator.
+
+
+
+
+Search for emails using criteria defined in the request body.
+
+The following is a brief description of each filter and their possible values for the apiFilter field:
+
+- Recipient.Email # The recipient's email address. (type: text_free)
+- Header.Other.Message ID # The content of the Message-ID header for the email. (type: text_free)
+- Header.From.Email # The email address present in the From header, also known as the header-From address. (type: text_free)
+- Header.Subject.Subject Value # The subject line of the email. (type: text_free)
+- Action.Action Taken # Actions taken against the email. (type: text_enum)
+   - Hold (value: hold)
+   - Move To Junk (value: moveToJunk)
+   - Link Action (value: link_actions)
+   - Attachment Action (value: attachment_actions)
+- Antigena Tag # Emails with this tag. (type: text_enum)
+   - Add all the possible values from the list in the enum schema, some interesting examples are:
+    - out of character (value: ""ah"")
+    - credential harvesting (value: ""ch"")
+    - extortion (value: ""ex"")
+    - phishing attachment (value: ""pa"")
+    - spam (value: ""sp"")
+    - phishing link (value: ""pl"")
+    - solicitation (value: ""so"")
+    - spoofing indicators (value: ""ss"")
+    - vip impersonation (value: ""vi"")
+    - malware or ransomware (value: ""mr"")
+- Email.Antigena Email Anomaly # The combined Antigena anomaly score for this email. (type: numeric_boundary)
+- Recipient.Domain.Domain # The domain name of the recipient's email address. (type: text_free)
+- Header.From.Domain # The root domain of the header-From address. (type: text_free)
+- Connection.Direction # The direction of the email with respect to the organization. (type: text_enum)
+    - Inbound (value: inbound)
+    - Outbound (value: outbound)
+- Link.Contains Links # Whether an email contains links. (type: flag)
+- Attachment.Contains Attachment # Whether an email contains an attachment. (type: flag)
+- Connection.Email.Recipients.Total Number # The total number of recipients for this email. (type: numeric_free)
+- Model Tag Severity # Emails with a tag of this severity applied. (type: text_enum)
+    - Info (value: info)
+    - Warn (value: warn)
+    - Critical (value: critical)
+- Request Release Status # Status of any release requests by one of the email recipients. (type: text_enum)
+    - Requested (value: requested)
+    - Approved (value: approved)
+    - Rejected (value: rejected)
+
+Examples:
+
+Get me any emails to `test@holdingsinc.com` that occurred in the last week (ensure you specify the correct unix timestamps for the time range you desire):
+
+query:
+    ```
+    https://[instance]/agemail/api/ep/api/v1.0/emails/search?dtimeFrom=2024-10-01T00:00:00Z&dtimeTo=2024-10-08-00:00:00Z&page=0&itemsPerPage=20&query={""criteriaList"":[{""apiFilter"":""Recipient.Email"",""value"":""test@holdingsinc.com"",""operator"":""=""}],""mode"":""and""}
+    ```
+
+
+Get me any emails from `test@holdingsinc.com` that occurred in the last week (ensure you specify the correct timestamps for the time range you desire):
+
+query:
+    ```
+    https://[instance]/agemail/api/ep/api/v1.0/emails/search?dtimeFrom=2024-10-01T00:00:00Z&dtimeTo=2024-10-08-00:00:00Z&page=0&itemsPerPage=20&query={""criteriaList"":[{""apiFilter"":""Header.From.Email"",""value"":""test@holdingsinc.com"",""operator"":""=""}],""mode"":""and""}
+    ```
+
+
+Get me any emails that are critical severity in the the past month
+
+query:
+    ```
+    https://[instance]/agemail/api/ep/api/v1.0/emails/search?dtimeFrom=2024-10-01T00:00:00Z&dtimeTo=2024-09-01-00:00:00Z&page=0&itemsPerPage=20&query={""criteriaList"":[{""apiFilter"":""Model Tag Severity"",""value"":""critical"",""operator"":""=""}],""mode"":""and""}
+    ```
+
+Search for emails with model tag severity of informational or emails that have been sent to ""jack.bower""
+
+query:
+    ```
+    https://[instance]/agemail/api/ep/api/v1.0/emails/search?dtimeFrom=2024-10-22T00:00:00Z&dtimeTo=2024-10-29T11:44:45Z&itemsPerPage=20&page=0&query={""criteriaList"":[{""apiFilter"":""Model Tag Severity"",""value"":""info"",""operator"":""=""},{""apiFilter"":""Recipient.Email"",""value"":""ben.akrill"",""operator"":""~*""}],""mode"":""or""}
+    ```
+
+To create a search request, follow these steps:
+
+1) Calculate the dtimeFrom and dtimeTo UTC timestamps (yyyy-MM-ddTHH:mm:ssZ), make sure these are set to the desired time range. Default dtimeFrom to the current timestamp.
+2) Create the query object, this should be a json object. The value must be formatted as a valid object enclosed within curly braces {...} so that the endpoint can directly index into it.
+2a) Ensure the criteriaList items are correct and the mode is speciifed
+3) Combine everything together the page and itemsPerPage count, keep in mind you may need to iterate if more than 20 emails are found."
+Darktrace,EmailGetTags,"For the Darktrace Email platform return information about all tags.
+"
+Darktrace,EmailGetActions,"For the Darktrace Email platform return information about Darktrace Email actions.
+"
+Darktrace,EmailGetFilters,"For the Darktrace Email platform return filters available to use in the /emails/search endpoint.
+"
+forescoutrem,"get_rem_assets","Retrieves a list of all REM Assets and their related properties. These properties include a risk score and any associated events impacting that score, as well as a risk severity and device criticality. Risk indicators include exposed services and confguration findings, with the exposed services having the service name, port/protocol and the potential exposure from that service. Configuration findings provide a description, severity, timestamp along with running application name, source, compliance status and any other relevant information for that finding. An overall compliance status is provided along with policy, rule name and status of individual compliance policies that feed this status.
+A list of threats for a host is also returned with a threat name, description, status and if relevant a case number and the creation time. Network interface information with Mac and/or IP is provided. Where available, network access information is also provided to help locate the host on a wired or wireless network, including switch and switch port information, vlan information, wireless AP and SSID information, and 802.1x information to name a few. In addition, an extensive amount of other host information is provided if available within Forescout, which includes, but is not limited to, running services and processes, installed applications, hostname, domain name, open ports, VPN user details and IP, user name, title, department, email, and device function, vendor, operating system and model.
+For medical or operational technology devices, further relevant host information is provided specific to those device types, such as purdue level, or medical device function. This also provides a list of Forescout eyeSight related properties such as segment name, path and group memberships.
+This path has 4 required parameters, the Start and End parameters should always be formatted in iso_utc time, YYYY-MM-DDTHH:MM:SS.sssZ, while the Sort Order can be either ASCENDING or DESCENDING. The Order By parameter can be any of the values returned by this API, as defined in the schema. When none of these have been defined, the default should be to look at the last 7 days and sort by risk_score DESCENDING
+Whenever any information is returned to a user, you **should always** include either hostname, IP address or MAC address so that further queries can be made for a specific host.
+Whenever returning multiple devices in a response, you **should always** identify the device by IP address.
+Unless a user specifically asks otherwise, whenever providing events or a timeline, you **should always** explain this from the time of an incident going backwards
+"
+SecurityGuardian,"Get the Top 25 Active Threat Indicators / Findings Detected by Security Guardian","Get Active Threat Indicators with top 25 findings detected by Security Guardian.  Returns Threat Indicators / Top 25 Findings / Issues and associated information found in the Security Guardian logs. The information returns data such as indicator, object names and SIDs involved along with timing."
+SecurityGuardian,"Get Active Threat Indicators for Active Directory by Type and Count","Returns the count of active indicators in the Security Guardian logs. The data is grouped by the indicator and sorted by the count in descending order."
+SecurityGuardian,"Get all Active Threat Indicators for Active Directory SID","Query Security Guardian Logs for Active Directory SID and return any threat indicators the SID may be associated with along with supporting information."
+SecurityGuardian,"Get all Active Tier Zero findings for Active Directory by Count and Type","Get all Active Tier Zero findings for Active Directory by count and type. Sorted in descending order by count."
+SecurityGuardian,"Get first 100 active indicators that partially match indicator or finding name","Get the first 100 active indicators and all values that match indicator or finding name (either partial or full indicator name matching).  Use single Keyword for best results"
+SecurityGuardian,"Check Security Guardian Setup","Checks to ensure Security Guardian is setup properly and logs are being generated."
+Surface,SurfaceDeviceModelKnowledgeBase,"Retrieves information about Surface Devices from Surface documentation based on devices held or owned by current user's organisation/enterprise"
+Surface,SurfaceKnowledgeBase,"Retrieves information from Surface documentation about Microsoft Surface Devices."
+Surface,SurfaceWarrantyCoverageClaimsReport,"Gets the warranty coverage report for Surface devices."
+Purview,DataSecurityAnalytics,"This skill answers analytics type of user queries on data security related data maintained in Microsoft Purview."
+Purview,DspmOutOfScope,"This skill answers Out of scope prompts inputted in DSPM solution. Out of scope prompts include a variety of topics that can't be answered with PurviewKB nor DSA skill."
+Purview,GetDataRiskSummary,"Summarizes risk of the data associated with the security incident or a Data Loss Prevention alert."
+Purview,GetUserRiskSummary,"Provides an overview of user risk using Purview Insider Risk Management."
+Purview,PolicyGapQuerySkill,"Queries policy Gaps and shortfalls in tenant enviroment."
+Purview,PurviewKnowledgeBase,"Ask questions or search for information about Microsoft Purview solutions."
+Purview,SummarizePurviewAlert,"Summarizes Microsoft Purview alerts from Purview Data Loss Prevention and Insider Risk Management."
+Purview,TriagePurviewAlerts,"Retrieves recent Purview Data Loss Prevention alerts based on severity and status."
+Purview,ZoomIntoPurviewDataRisk,"Identifies attributes like labels or activities for the data in the context of Microsoft Purview."
+Purview,ZoomIntoPurviewUserRisk,"Provides information about the user's activities from Purview Insider Risk Management."
+M365,DefenderValidateEmailFeedback,
+M365,GetDefenderDeviceSummary,"Get device insights, security issues, and other important information."
+M365,GetDefenderIdentitySummary,"Get identity insights, security concerns and potential anomalies"
+M365,GetDefenderIncidentReport,"Get a report about an attack and your response, including who took action and when."
+M365,GetDefenderIncidents,"Get the list of incidents or find specific incidents."
+M365,GetFileAnalysis,"Inspect a file using available information, including API calls, certificates, and strings."
+M365,GetIncidentGuidedResponse,"Get step-by-step response recommendations for an incident."
+DruvaSentinelPlugin,GetAdminSigninData,"Get Admin Sign in data for last N days"
+DruvaSentinelPlugin,GetAdminSigninDataByAdmin,"Get Admin Sign in count by admin"
+DruvaSentinelPlugin,GetAnamolyinLoginEvents,"Get Anaomly in Login Events"
+DruvaSentinelPlugin,GetDataAnamoliesinLastNDays,"Get Anamolies in Last N Days"
+DruvaSentinelPlugin,GetEncryptionAlertsinLastNDays,"Get Encryption Alerts in Last N Days"
+DruvaSentinelPlugin,GetDataAnamoliesByResourceName,"Get Anamolies in Last N Days by Resource Name"
+DruvaSentinelPlugin,GetAdminActivitiesinLastNDays,"Get admin activities in Last N Days"
+DruvaSentinelPlugin,ShowIPAddressUsedbyDruvaAdmin,"Get IP address used by admin in Last N Days"
+DruvaSentinelPlugin,ShowDataAccessEventsinDruva,"Get Data Access Events-Restores, Downloads data from Druva cloud"
+DruvaSentinelPlugin,ShowDataAccessEventsinDruvaByIPAddress,"Get Data Access Events-Restores, Downloads data from Druva cloud by ip address"
+AzureAiSearch,SearchAzureAiSearchIndex,"Search and retrieve text content from your Azure AI Search index."
+WAF,GetTopRulesTriggered,"Get top Azure Web Application Firewall rules triggered by block action in the specified period."
+WAF,GetTopBlocksByIP,"Get top malicious IPs blocked by Azure Web Application Firewall in the specified period."
+WAF,GetSQLiBlocksByWAF,"Get details about SQL injection attacks blocked by Azure Web Application Firewall."
+WAF,GetXSSBlocksByWAF,"Get details about cross-site scripting attacks blocked by Azure Web Application Firewall."
+Entra,AccessReviewAgent,"Helps users explore and understand their in-progress access reviews in Microsoft Entra ID."
+Entra,AccessReviewAgentBeta,"Helps users explore and understand their in-progress access reviews in Microsoft Entra ID."
+Entra,AccessPackageAccessReviewRecommendationSkill,"@""Get all access package assignments and their user details along with recommendations.
+            Parameters:
+            - accessReviewDefinitionId (required)
+            - accessReviewLatestInstanceId (required)
+
+            Return the json list of users with their user details and recommendations, justifications, and confidence."
+Entra,AccessReviewRecommendationSkill,"@""Get the identities and their details along with recommendations.
+            Parameters:
+            - accessReviewDefinitionId (required)
+            - accessReviewLatestInstanceId (required)
+            - resourceType (required, ex: Group, Application, AccessPackage)
+
+            Returns information about each user's data, including:
+            - id (User ID)
+            - displayName (Display name)
+            - userPrincipalName (User principal name (email))
+            - accountEnabled (Account enabled status)
+            - department (Department)
+            - employeeLeaveDateTime (Employee leave date)
+            - employeeHireDate (Employee hire date)
+            - employeeType (Employee type)
+            - userType (User type)
+            - jobTitle (Job title)
+            - createdDateTime (Created date)
+            - lastSignInDateTime (Users last signin date) 
+            - activityNames (List of entra id actions performed)
+            - lastActivityDateTime (Last entra id action date)
+            - recommendation (Recommendation)
+            - justification (Justification)
+            - confidence (Confidence level in recommendation)
+
+            Return the json list of users with their user details and recommendations, justifications, and confidence."
+Entra,AccessReviewsInstanceDecisionSkill,"Decision details of the latest instance of an access review definition"
+Entra,ApplicationAccessReviewRecommendationSkill,"@""Get all app role assignments of a specific Azure AD application identified by its ID and their user details along with recommendations.
+            Parameters:
+            - accessReviewDefinitionId (required)
+            - accessReviewLatestInstanceId (required)
+
+            Returns information about each user's data, including:
+            - id (User ID)
+            - displayName (Display name)
+            - userPrincipalName (User principal name (email))
+            - accountEnabled (Account enabled status)
+            - department (Department)
+            - employeeLeaveDateTime (Employee leave date)
+            - employeeHireDate (Employee hire date)
+            - employeeType (Employee type)
+            - userType (User type)
+            - jobTitle (Job title)
+            - createdDateTime (Created date)
+            - lastSignInDateTime (Users last sign-in date)
+            - activityNames (List of entra id actions performed)
+            - lastActivityDateTime (Last entra id action date)
+            - recommendation (Recommendation)
+            - justification (Justification)
+            - confidence (Confidence level in recommendation)
+
+            Return the json list of users with their user details and recommendations, justifications, and confidence."
+Entra,ConsolidatedLifecycleWorkflowsSkill,"Summarizes Lifecycle Workflows requests"
+Entra,FetchInProgressAccessReviewsInstancesSkill,"Fetch All InProgress Access Reviews Instances"
+Entra,GetEntraApplication,"View list of Microsoft Entra ID applications or view property details of each application by id, appId or displayName in Microsoft Entra."
+Entra,GetEntraApplicationOutsideTenant,"View list of Microsoft Entra ID service principals that have associated app registrations registered outside the your tenant."
+Entra,GetEntraAuditLogs,"View changes to applications, groups, users, and licenses in Microsoft Entra ID"
+Entra,GetEntraDiagnosticsLogs,"View settings for diagnostic log collection and streaming of activity logs in Microsoft Entra ID"
+Entra,GetEntraGroupDetailsV1,"Search Microsoft Entra ID groups"
+Entra,GetEntraNull,"This skill serves as a default selection when no suitable match is found in the available skill set. "
+Entra,GetEntraRiskyServicePrincipals,"View list of Microsoft Entra ID service principals with high, medium, low risk of compromise."
+Entra,GetEntraRiskyUsers,"View details of Microsoft Entra ID users with high, medium, or low risk of compromise"
+Entra,GetEntraServicePrincipalDetails,"View Microsoft Entra ID service principal details."
+Entra,GetEntraServicePrincipalPermissionsGranted,"Lists the permissions granted on a service principal."
+Entra,GetEntraSignInLogsV1,"View Microsoft Entra ID sign-in log details including policy evaluation results, and details on the location, device, and target resource"
+Entra,GetEntraUnusedApplication,"View list of Microsoft Entra ID applications that are unused."
+Entra,GetEntraUserDetailsV1,"View contact information, authentication method registration, group membership and ownership info, and account details for users in Microsoft Entra ID."
+Entra,GroupAccessReviewRecommendationSkill,"@""Get all members of a specific Azure AD group identified by its ID and their user details along with recommendations.
+            Parameters:
+            - accessReviewDefinitionId (required)
+            - accessReviewLatestInstanceId (required)
+
+            Returns information about each user's data, including:
+            - id (User ID)
+            - displayName (Display name)
+            - userPrincipalName (User principal name (email))
+            - accountEnabled (Account enabled status)
+            - department (Department)
+            - employeeLeaveDateTime (Employee leave date)
+            - employeeHireDate (Employee hire date)
+            - employeeType (Employee type)
+            - userType (User type)
+            - jobTitle (Job title)
+            - createdDateTime (Created date)
+            - lastSignInDateTime (Users last signin date) 
+            - activityNames (List of entra id actions performed)
+            - lastActivityDateTime (Last entra id action date)
+            - recommendation (Recommendation)
+            - justification (Justification)
+            - confidence (Confidence level in recommendation)
+
+            Return the json list of users with their user details and recommendations, justifications, and confidence."
+Entra,LifecycleWorkflowsCompareVersionsSkill,"Compares two Microsoft Entra ID Lifecycle Workflows versions and provides a summary"
+Entra,ProcessAccessReviewsInstanceSkill,"Process Access Reviews Instance"
+Entra,UserAccessReviewInProgressSkill,"List all the access review schedule definition where the current user is reviewer. For each review, it includes details like the access review definition name, who created it, its status, start and end dates, and the display name of the resource being reviewed.\"","
+Web,FetchUrl,"Downloads the content from an anonymously accessible URL. If the content is HTML then it is converted to Markdown or plain text format."
+ReversingLabsSpectraAnalyze,GetTiCoreReport,"Get the TiCore analysis report of the provided file hash from Spectra Analyze.
+"
+ReversingLabsSpectraAnalyze,GetFileClassification,"Get the classification of the provided file hash from Spectra Analyze.
+"
+Intel471,SearchMalwareIntelligenceIndicators,"Get a list of malware indicators (IPv4 address, URL and file hashes) matching filter criteria.
+"
+Intel471,SearchMalwareFamilies,"Get a list of Malware Families matching filter criteria.
+"
+Intel471,SearchMalwareReports,"Get a list of Malware Intelligence Reports matching filter criteria
+"
+Intel471,SearchVulnerabilityReports,"Get a list of Vulnerability (CVE) Reports matching filter criteria.
+"
+Intel471,SearchThreatActors,"Get a list of threat actors, associated reports and underground forum activity.
+"
+Intel471,SearchThreatActorsInReports,"Get a list of Information or FINTEL reports discussing threat actor's activity.
+"
+Intel471,SearchBreachAlerts,"Get a list of Breach Alerts matching filter criteria.
+"
+CyberArk,AccountsGetAccounts,"Get a list of privileged accounts from CyberArk.
+"
+CyberArk,AccountsGetAccount,"Get detailed information about a privileged account identified by its id.
+"
+UrlScan,"Scan Url","Scans a URL using the Url Scan API"
+Jamf,"Raw Inventory Record","Get entire macOS inventory record from Jamf Pro by providing its serial number
+"
+Jamf,"General and Location Info","Get General information (host name, username, last checkin, last inventory update ip address, jamf version, and more) from the inventory record by serial number.
+"
+Jamf,"Hardware and Security Info","Get macOS Hardware info and Security settings (model ID, os version, Filevault status, SIP status, Gatekeeper status, XProtect version, firewall status and more) from the inventory record in Jamf Pro by providing serial number.
+"
+Jamf,"Certificates Info","Get Certificates information for a macOS device from the Jamf Pro inventory record by providing the macOS serial number.
+"
+Jamf,"Software Info","Get macOS software information (installed applications, available updates, fonts, plugins and more) for an endpoint from the Jamf Pro inventory record by providing the mac serial number.
+"
+Jamf,"Extension Attributes Info","Get custom (specific to the cusotmer) attribute information for a macOS endpoint from the Jamf inventory record by providing the mac serial number.
+#Example What is the value of [insert customer specific inventory attribute] for this mac H2WFP7BPQ6NV?
+"
+Jamf,"Groups Info","Get group membership (Jamf Pro smart and static groups) information for a macOS endpoint from the jamf inventory record by providing the mac serial number.
+"
+Jamf,"Configuration Profiles Info","Get Configuration Profiles (profile ids) information from the inventory record by serial number.
+"
+Agents,InteractiveAgentPlanner,"Generates a structured, multi-step execution plan that the agent will follow to fulfill a user's request."
+"Orchestrator.InteractiveAgent",,
+Visualization,,
+NL2KQL,,
+"Orchestrator.Common",,
+MSGraph,,
+CodeExecutor,,
+DOTNET,,
+"Microsoft.M365D.PhishingTriageAgent",,
+"Microsoft.SecurityCopilot.AppRiskAgent",,
+LearnKnowledgeService,,
