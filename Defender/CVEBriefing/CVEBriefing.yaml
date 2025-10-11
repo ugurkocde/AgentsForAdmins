@@ -4,7 +4,7 @@ Descriptor:
   Description: >
     Generates a report listing newly published CVEs that are relevant to the
     specified environment, including severity and affected products.
-  Icon: ''
+  Icon: ""
 AgentDefinitions:
   - Name: CVEBriefing
     DisplayName: CVE Briefing
@@ -12,9 +12,9 @@ AgentDefinitions:
       Generates a report listing newly published CVEs that are relevant to the
       specified environment, including severity and affected products.
     Publisher: Custom
-    Product: ThreatIntelligence
+    Product: Microsoft Defender XDR
     RequiredSkillsets:
-      - ThreatIntelligence.DTI
+      - Microsoft Defender XDR
     AgentSingleInstanceConstraint: None
     Triggers:
       - Name: Default
@@ -34,7 +34,7 @@ SkillGroups:
               Comma-separated keywords, product names, or technologies relevant
               to your environment (e.g., "Windows Server, Cisco, Apache"). Must
               not be empty.
-            DefaultValue: ''
+            DefaultValue: ""
             Required: true
           - Name: minCvssScore
             Description: >-
