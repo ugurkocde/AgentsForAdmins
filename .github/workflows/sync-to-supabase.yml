@@ -21,6 +21,9 @@ jobs:
   sync-agents:
     runs-on: ubuntu-latest
     name: Sync Security Copilot Agents to Supabase
+    permissions:
+      contents: write  # Need write to create commit comments
+      issues: write    # Need write to create issues
 
     steps:
     - name: Checkout repository
@@ -77,32 +80,6 @@ jobs:
         name: sync-log-${{ github.run_number }}
         path: .github/scripts/sync-log.json
         retention-days: 30
-
-    - name: Comment on commit (if sync failed)
-      if: failure()
-      uses: actions/github-script@v7
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const fs = require('fs');
-          let errorMessage = 'Agent sync to Supabase failed. Check the workflow logs for details.';
-
-          // Try to read sync log for more details
-          try {
-            const syncLog = JSON.parse(fs.readFileSync('.github/scripts/sync-log.json', 'utf8'));
-            if (syncLog.errors && syncLog.errors.length > 0) {
-              errorMessage += '\n\nErrors:\n' + syncLog.errors.map(e => `- ${e.agentId}: ${e.error}`).join('\n');
-            }
-          } catch (e) {
-            // Ignore if sync log doesn't exist
-          }
-
-          await github.rest.repos.createCommitComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            commit_sha: context.sha,
-            body: `⚠️ **Agent Sync Failed**\n\n${errorMessage}\n\n[View workflow run](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
-          });
 
     - name: Create issue on repeated failures
       if: failure() && github.run_attempt > 2

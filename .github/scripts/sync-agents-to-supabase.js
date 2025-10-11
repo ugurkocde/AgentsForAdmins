@@ -221,8 +221,7 @@ function transformYamlToAgent(yamlContent, filePath, service, changelog) {
       yaml_content: yamlContent,
       changelog: changelog || null,
       sync_status: 'synced',
-      last_synced_at: new Date().toISOString(),
-      downloads: 0
+      last_synced_at: new Date().toISOString()
     };
 
     return agentData;
