@@ -1,22 +1,22 @@
-# Security Copilot Hub
+# Agents for Admins
 
 <p align="center">
-  <a href="https://securitycopilothub.com"><img src="https://img.shields.io/badge/Hub-SecurityCopilotHub.com-0078D4?style=for-the-badge&logo=microsoft" alt="Visit SecurityCopilotHub.com"></a>
+  <a href="https://agentsforadmins.com"><img src="https://img.shields.io/badge/Hub-AgentsForAdmins.com-0078D4?style=for-the-badge&logo=microsoft" alt="Visit AgentsForAdmins.com"></a>
   <a href="https://www.linkedin.com/groups/15356022/"><img src="https://img.shields.io/badge/Join-LinkedIn%20Community-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn Community"></a>
   <a href="#repository-layout"><img src="https://img.shields.io/badge/Agents-Available-success?style=for-the-badge&logo=shield" alt="Agents Available"></a>
   <a href="#contributing"><img src="https://img.shields.io/badge/Contributions-Welcome-44c767?style=for-the-badge&logo=github" alt="Contributions Welcome"></a>
 </p>
 
-Security Copilot Hub is a community-driven catalog of ready-to-use agents for the Microsoft Security Copilot portal. Each agent is packaged so security teams can quickly import proven workflows into their tenant or contribute new ones for others to use.
+Agents for Admins is a community-driven catalog of ready-to-use agents for the Microsoft Security Copilot portal. Each agent is packaged so security teams can quickly import proven workflows into their tenant or contribute new ones for others to use.
 
 ## What You Can Do
 
 - Browse product-focused agent collections for Microsoft Defender, Entra, Intune, and Purview scenarios.
 - Import the YAML definitions directly into https://securitycopilot.microsoft.com to light up automated investigations, posture assessments, and governance reports.
 - Review each agent's YAML to understand required inputs, skillsets, and workflow steps before running it in your tenant.
-- Fork the project, add your own agents, and help expand the community directory on https://securitycopilothub.com.
+- Fork the project, add your own agents, and help expand the community directory on https://agentsforadmins.com.
 
-> 💡 **Learn more:** The live catalog with screenshots and walk-throughs is available at [SecurityCopilotHub.com](https://securitycopilothub.com).
+> 💡 **Learn more:** The live catalog with screenshots and walk-throughs is available at [AgentsForAdmins.com](https://agentsforadmins.com).
 
 ## Quick Start: Importing an Agent
 
