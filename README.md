@@ -52,8 +52,9 @@ Each agent folder contains at minimum:
 | **Intune** | [Endpoint Security & Compliance Posture Agent](Intune/EndpointSecurityCompliancePostureAgent) | Automates the monitoring and reporting of endpoint security and compliance posture, correlating device, alert, vulnerability, and user data to generate actionable compliance reports with risk scori... |
 | **Intune** | [Inactive Device Cleanup Agent](Intune/InactiveDeviceCleanupAgent) | Automates the identification and cleanup of inactive, stale, or duplicate Intune device enrollments, correlates user and security data from Entra and Defender XDR, and generates prioritized remedia... |
 | **Purview** | [Data Loss Prevention Incident Response Agent](Purview/DLPIncidentResponseAgent) | Automates DLP policy violation monitoring, triaging, and response by correlating incidents with user risk scores, data sensitivity, and insider risk indicators. Generates investigation workflows, c... |
+| **Purview** | [Sensitivity Label & Information Protection Governance Agent](Purview/SensitivityLabelGovernanceAgent) | Proactively identifies labeling gaps, shadow sensitive data, and information protection policy violations across Microsoft 365. Analyzes unlabeled content, calculates risk scores, and provides reme... |
 
-*Total Agents: 8*
+*Total Agents: 9*
 
 <!-- AGENTS-TABLE-END -->
 
