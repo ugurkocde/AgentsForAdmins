@@ -40,24 +40,23 @@ Each agent folder contains at minimum:
 - `*.yaml` – The importable agent definition for Security Copilot (required).
 
 <!-- AGENTS-TABLE-START -->
-
 ## Available Agents
 
-| Service      | Agent Name                                                                                             | Description                                                                                                                                                                                              |
-| ------------ | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Defender** | [CVE Briefing](Defender/CVEBriefing)                                                                   | Generates a report listing newly published CVEs that are relevant to the specified environment, including severity and affected products.                                                                |
-| **Defender** | [Threat Hunting & Investigation Agent](Defender/ThreatHuntingAgent)                                    | Hunts for threats across Defender XDR workloads (endpoints, email, identity, cloud apps), correlates incidents and alerts, maps MITRE ATT&CK techniques, and provides investigation playbooks with co... |
-| **Entra**    | [Guest User Access Review & Governance Agent](Entra/GuestUserGovernanceAgent)                          | Automates guest user access review, risk scoring, permissions analysis, and governance reporting for external guests using Entra, Defender XDR, and Purview. Accepts user parameters for inactivity t... |
-| **Entra**    | [Identity Risk Assessment Agent](Entra/IdentityRiskAssessmentAgent)                                    | Identifies and triages identity risks from Entra ID Protection, cross-references with Defender XDR and Purview, calculates risk scores, and provides prioritized remediation and automation templates.   |
-| **Entra**    | [Privileged Access Management Review Agent](Entra/PrivilegedAccessManagementAgent)                     | Reviews privileged role assignments, PIM configurations, and admin account security to identify and remediate over-privileged access, enforce PIM adoption, and generate governance reports with reme... |
-| **Entra**    | [Conditional Access Drift & Coverage Agent](Entra/ConditionalAccessPolicyDriftAgent)                   | Assesses Conditional Access policy coverage, detects drift and risky exclusions, correlates recent sign-in risk signals, and provides prioritized remediation and governance templates.                  |
-| **Entra**    | [Workload Identity Secret & Permission Hygiene Agent](Entra/WorkloadIdentitySecurityAgent)             | Reviews Entra applications and service principals for excessive permissions, stale credentials, risky workload identities, and unused app exposure.                                                      |
-| **Intune**   | [Endpoint Security & Compliance Posture Agent](Intune/EndpointSecurityCompliancePostureAgent)          | Automates the monitoring and reporting of endpoint security and compliance posture, correlating device, alert, vulnerability, and user data to generate actionable compliance reports with risk scori... |
-| **Intune**   | [Inactive Device Cleanup Agent](Intune/InactiveDeviceCleanupAgent)                                     | Automates the identification and cleanup of inactive, stale, or duplicate Intune device enrollments, correlates user and security data from Entra and Defender XDR, and generates prioritized remedia... |
-| **Purview**  | [Data Loss Prevention Incident Response Agent](Purview/DLPIncidentResponseAgent)                       | Automates DLP policy violation monitoring, triaging, and response by correlating incidents with user risk scores, data sensitivity, and insider risk indicators. Generates investigation workflows, c... |
-| **Purview**  | [Sensitivity Label & Information Protection Governance Agent](Purview/SensitivityLabelGovernanceAgent) | Proactively identifies labeling gaps, shadow sensitive data, and information protection policy violations across Microsoft 365. Analyzes unlabeled content, calculates risk scores, and provides reme... |
+| Service | Agent Name | Description |
+| ------- | ---------- | ----------- |
+| **Defender** | [CVE Briefing](Defender/CVEBriefing) | Generates a report listing newly published CVEs that are relevant to the specified environment, including severity and affected products. |
+| **Defender** | [Threat Hunting & Investigation Agent](Defender/ThreatHuntingAgent) | Hunts for threats across Defender XDR workloads (endpoints, email, identity, cloud apps), correlates incidents and alerts, maps MITRE ATT&CK techniques, and provides investigation playbooks with co... |
+| **Entra** | [Conditional Access Drift & Coverage Agent](Entra/ConditionalAccessPolicyDriftAgent) | Assesses Conditional Access policy coverage, detects drift and risky exclusions, correlates recent sign-in risk signals, and provides prioritized remediation and governance templates. |
+| **Entra** | [Guest User Access Review & Governance Agent](Entra/GuestUserGovernanceAgent) | Automates guest user access review, risk scoring, permissions analysis, and governance reporting for external guests using Entra, Defender XDR, and Purview. Accepts user parameters for inactivity t... |
+| **Entra** | [Identity Risk Assessment Agent](Entra/IdentityRiskAssessmentAgent) | Identifies and triages identity risks from Entra ID Protection, cross-references with Defender XDR and Purview, calculates risk scores, and provides prioritized remediation and automation templates. |
+| **Entra** | [Privileged Access Management Review Agent](Entra/PrivilegedAccessManagementAgent) | Reviews privileged role assignments, PIM configurations, and admin account security to identify and remediate over-privileged access, enforce PIM adoption, and generate governance reports with reme... |
+| **Entra** | [Workload Identity Secret & Permission Hygiene Agent](Entra/WorkloadIdentitySecurityAgent) | Reviews Entra applications and service principals for excessive permissions, stale credentials, risky workload identities, and unused app exposure. |
+| **Intune** | [Endpoint Security & Compliance Posture Agent](Intune/EndpointSecurityCompliancePostureAgent) | Automates the monitoring and reporting of endpoint security and compliance posture, correlating device, alert, vulnerability, and user data to generate actionable compliance reports with risk scori... |
+| **Intune** | [Inactive Device Cleanup Agent](Intune/InactiveDeviceCleanupAgent) | Automates the identification and cleanup of inactive, stale, or duplicate Intune device enrollments, correlates user and security data from Entra and Defender XDR, and generates prioritized remedia... |
+| **Purview** | [Data Loss Prevention Incident Response Agent](Purview/DLPIncidentResponseAgent) | Automates DLP policy violation monitoring, triaging, and response by correlating incidents with user risk scores, data sensitivity, and insider risk indicators. Generates investigation workflows, c... |
+| **Purview** | [Sensitivity Label & Information Protection Governance Agent](Purview/SensitivityLabelGovernanceAgent) | Proactively identifies labeling gaps, shadow sensitive data, and information protection policy violations across Microsoft 365. Analyzes unlabeled content, calculates risk scores, and provides reme... |
 
-_Total Agents: 11_
+*Total Agents: 11*
 
 <!-- AGENTS-TABLE-END -->
 
