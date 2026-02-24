@@ -9,16 +9,19 @@
 ## Sample Query Inputs
 
 ### 1. Credential Hygiene Test
+
 ```
 Show service principals with secrets or certificates expiring in the next 45 days
 ```
 
 ### 2. Permission Risk Test
+
 ```
 Find workload identities with high-privilege API permissions and rank by risk
 ```
 
 ### 3. Orphaned and Stale Apps Test
+
 ```
 Identify app registrations with no owners and no activity in the last 90 days
 ```

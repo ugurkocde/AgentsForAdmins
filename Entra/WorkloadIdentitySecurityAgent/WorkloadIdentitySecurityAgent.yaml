@@ -4,7 +4,7 @@ Descriptor:
   Description: >-
     Reviews Entra applications and service principals for excessive permissions,
     stale credentials, risky workload identities, and unused app exposure.
-  Icon: ''
+  Icon: ""
 AgentDefinitions:
   - Name: WorkloadIdentitySecurityAgent
     DisplayName: Workload Identity Secret & Permission Hygiene Agent
@@ -35,7 +35,7 @@ SkillGroups:
             Description: >-
               User query specifying scope such as business units, environments,
               app names, secret/certificate expiry window, or permission focus.
-            DefaultValue: ''
+            DefaultValue: ""
             Required: true
         Settings:
           Instructions: >

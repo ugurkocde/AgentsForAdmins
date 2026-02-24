@@ -9,16 +9,19 @@
 ## Sample Query Inputs
 
 ### 1. Broad Coverage Check
+
 ```
 Review Conditional Access coverage for all privileged roles and show major gaps
 ```
 
 ### 2. Exclusion Risk Check
+
 ```
 Find risky Conditional Access exclusions for Finance and IT admin groups from the last 30 days
 ```
 
 ### 3. App-Specific Hardening
+
 ```
 Assess Conditional Access posture for Exchange Online and SharePoint and prioritize remediation
 ```
