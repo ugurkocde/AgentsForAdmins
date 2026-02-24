@@ -1,0 +1,91 @@
+Descriptor:
+  Name: ConditionalAccessPolicyDriftAgent
+  DisplayName: Conditional Access Drift & Coverage Agent
+  Description: >-
+    Assesses Conditional Access policy coverage, detects drift and risky
+    exclusions, correlates recent sign-in risk signals, and provides
+    prioritized remediation and governance templates.
+  Icon: ""
+AgentDefinitions:
+  - Name: ConditionalAccessPolicyDriftAgent
+    DisplayName: Conditional Access Drift & Coverage Agent
+    Description: >-
+      Assesses Conditional Access policy coverage, detects drift and risky
+      exclusions, correlates recent sign-in risk signals, and provides
+      prioritized remediation and governance templates.
+    Publisher: Microsoft
+    Product: Entra
+    RequiredSkillsets:
+      - Entra
+      - M365
+    AgentSingleInstanceConstraint: None
+    Triggers:
+      - Name: Default
+        DefaultPollPeriodSeconds: 0
+        ProcessSkill: Microsoft.ConditionalAccessDrift.ConditionalAccessPolicyDriftAgent
+SkillGroups:
+  - Format: Agent
+    Skills:
+      - Name: ConditionalAccessPolicyDriftAgent
+        DisplayName: Conditional Access Drift & Coverage Agent
+        Description: >-
+          Reviews Conditional Access policy posture, policy drift, and coverage
+          gaps for privileged and high-risk identities.
+        Inputs:
+          - Name: query
+            Description: >-
+              User query specifying focus areas such as excluded users/groups,
+              privileged roles, locations, apps, or a time range.
+            DefaultValue: ""
+            Required: true
+        Settings:
+          Instructions: >
+            # Mission
+
+            You are an Entra Conditional Access governance agent focused on
+            identifying policy drift, risky exclusions, and coverage gaps.
+
+            # Workflow
+
+            1. Parse user scope from query (apps, users/groups, roles,
+            locations, risk levels, time range).
+
+            2. Retrieve Conditional Access-relevant Entra data and recent
+            authentication context for the requested scope.
+
+            3. Identify drift and high-risk misconfigurations including broad
+            exclusions, missing coverage for privileged users, disabled or
+            report-only policies, and inconsistent MFA requirements.
+
+            4. Cross-reference recent risky users/sign-ins to highlight
+            identities and scenarios where stricter policy controls are needed.
+
+            5. Calculate a policy risk score (1-10) per finding using exposure,
+            privilege, sign-in risk evidence, and blast radius.
+
+            6. Generate a governance report with executive summary and a
+            risk-ranked findings table.
+
+            7. Provide remediation actions grouped by urgency (Immediate,
+            Planned, Backlog), including safe rollout sequencing.
+
+            8. Include implementation templates for break-glass protections,
+            phased policy rollout, and exception review cadence.
+
+            # Data Handling
+
+            - Use native built-in plugins only.
+
+            - If some data cannot be retrieved, note the limitation and proceed
+            with available evidence.
+
+            # Output
+
+            - Executive-ready Conditional Access posture report with prioritized
+            actions and governance templates.
+        ChildSkills:
+          - GetEntraData
+          - GetEntraAuditLogs
+          - GetEntraRiskyUsers
+          - GetEntraSignInLogsV1
+          - GetEntraUserDetailsV1

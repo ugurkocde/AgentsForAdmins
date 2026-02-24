@@ -1,0 +1,92 @@
+Descriptor:
+  Name: WorkloadIdentitySecurityAgent
+  DisplayName: Workload Identity Secret & Permission Hygiene Agent
+  Description: >-
+    Reviews Entra applications and service principals for excessive permissions,
+    stale credentials, risky workload identities, and unused app exposure.
+  Icon: ''
+AgentDefinitions:
+  - Name: WorkloadIdentitySecurityAgent
+    DisplayName: Workload Identity Secret & Permission Hygiene Agent
+    Description: >-
+      Reviews Entra applications and service principals for excessive
+      permissions, stale credentials, risky workload identities, and unused app
+      exposure.
+    Publisher: Microsoft
+    Product: Entra
+    RequiredSkillsets:
+      - Entra
+      - M365
+    AgentSingleInstanceConstraint: None
+    Triggers:
+      - Name: Default
+        DefaultPollPeriodSeconds: 0
+        ProcessSkill: Microsoft.WorkloadIdentitySecurity.WorkloadIdentitySecurityAgent
+SkillGroups:
+  - Format: Agent
+    Skills:
+      - Name: WorkloadIdentitySecurityAgent
+        DisplayName: Workload Identity Secret & Permission Hygiene Agent
+        Description: >-
+          Orchestrates workload identity posture analysis for app registrations
+          and service principals with remediation guidance.
+        Inputs:
+          - Name: query
+            Description: >-
+              User query specifying scope such as business units, environments,
+              app names, secret/certificate expiry window, or permission focus.
+            DefaultValue: ''
+            Required: true
+        Settings:
+          Instructions: >
+            # Mission
+
+            You are a workload identity security governance agent for Entra app
+            registrations and service principals.
+
+            # Workflow
+
+            1. Parse user scope and thresholds (for example secret expiry in
+            30/60/90 days, high-privilege permissions, inactive apps).
+
+            2. Retrieve application and service principal inventory and enrich
+            with ownership, credential metadata, and sign-in/activity context.
+
+            3. Identify high-risk issues: expiring/expired secrets or certs,
+            over-privileged API permissions, missing owners, stale/unused apps,
+            and risky service principals.
+
+            4. Correlate audit/risk indicators to prioritize findings with
+            recent suspicious behavior.
+
+            5. Assign a risk score (1-10) per workload identity using privilege
+            level, credential hygiene, activity profile, and risk evidence.
+
+            6. Generate an executive-ready report with summary metrics and
+            risk-ranked findings table.
+
+            7. Provide remediation playbooks for credential rotation,
+            permission right-sizing, ownership assignment, and app retirement.
+
+            8. Include automation templates for bulk expiry alerts, permission
+            review campaigns, and decommission workflow.
+
+            # Data Handling
+
+            - Use native built-in plugins only.
+
+            - If any data source is unavailable, note the gap and continue with
+            available data.
+
+            # Output
+
+            - Workload identity governance report with prioritized actions and
+            automation templates.
+        ChildSkills:
+          - GetEntraApplication
+          - GetEntraServicePrincipalDetails
+          - GetEntraServicePrincipalPermissionsGranted
+          - GetEntraUnusedApplication
+          - GetEntraRiskyServicePrincipals
+          - GetEntraAuditLogs
+          - GetEntraData
